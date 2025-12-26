@@ -7,7 +7,7 @@
 </head>
 <body>
 <div>
-    <aside id="sidebar"></aside>
+    <?php include "sidebar.php"; ?>
     
     <div class="content">
         <h1>lexer</h1>
@@ -16,8 +16,6 @@
 </div>
 </body>
 
-<script src="loadSidebar.js"></script>
 <script src="dynamicContentResize.js"></script>
-
 
 </html>
