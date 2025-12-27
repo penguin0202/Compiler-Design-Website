@@ -1,4 +1,4 @@
-@import url("sidebar.css");
+@import url("sidebar/sidebar.css");
 
 .content {
     /*margin-left: 140px; /* Same width as the sidebar + left position in px */

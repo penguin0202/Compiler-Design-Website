@@ -3,11 +3,10 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
 <div>
-    <?php include "sidebar.php"; ?>
+    <?php include "sidebar/sidebar.php"; ?>
     
     <div class="content">
         <h1>lexer</h1>

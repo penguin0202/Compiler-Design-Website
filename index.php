@@ -6,7 +6,7 @@
 </head>
 <body>
 <div>
-    <?php include "sidebar.php"; ?>
+    <?php include "sidebar/sidebar.php"; ?>
     
     <div class="content">
         <h1>hello</h1>
