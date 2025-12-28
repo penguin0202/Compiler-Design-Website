@@ -1,7 +1,7 @@
 <aside class="sidenav">
-    <a href="index.php">Home</a>
-    <a href="lexer.php">Lexer</a>
-    <a href="parser.php">Parser</a>
+    <a href="../index.php">Home</a>
+    <a href="../contents/lexer/lexer.php">Lexer</a>
+    <a href="../contents/parser/parser.php">Parser</a>
     <a href="#">Semantic Analyzer</a>
     <a href="#">CFG</a>
     <a href="#">IR</a>

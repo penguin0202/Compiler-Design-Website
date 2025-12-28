@@ -6,15 +6,15 @@
 </head>
 <body>
 <div>
-    <?php include "sidebar/sidebar.php"; ?>
+    <?php include "../sidebar/sidebar.php"; ?>
     
     <div class="content">
-        <h1>lexer</h1>
+        <h1>parser</h1>
         <p>hi</p>
     </div>
 </div>
 </body>
 
-<script src="dynamicContentResize.js"></script>
+<script src="../dynamicContentResize.js"></script>
 
 </html>
