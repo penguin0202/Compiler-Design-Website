@@ -15,3 +15,7 @@ Now I want to give  alittle background on computers. When computers were first i
 Anywho, perhaps it's time to discuss the 
 Before bytes
 Early history of computers as calculators
+
+
+Nowadays, computers do only three things: input/store infromation, process/operate on information, and output/display information. Give examples
+
