@@ -1,8 +1,14 @@
 Idiots pretensiouly rants about programming lanaguages, compilers, and things of the sort.
 Idiots pretends to be knowledgable in the field of programming languages, compilers, and other things of the sort.
 
-Growing up, I was always fascinated and confused on how writing in what essentially is a text file could make computers do things. In C, running "int c = 1;" makes the computer store the value of 1 somehwere. In Python, running "print(12345)" displays the number 12345 in the console. What I knew then was that computers store things in 1s and 0s, and those are certainly not 1s and 0s. So how do computers *know* what to do?
-Well here I want to tell you.
+This is more of a testament of my ability to communicate out a my grasp of a concept in my own unique way, rather than a true informational article (or whatever this piece of writing is called (a website? no that's too broad; an essay? no that's too formal)). However, I do think beginners digging into the world of creating programming language would greatly benefit this overview on the topic of compilers (and other adjacent stuffs that are crucial to the understanding and applying of it). Hopefully, professionals and people already pretty knowledgable in this field could also enjoy this article (yes, I'll stick with "article" for now), particularly how I choose to convey the main ideas, and how I format my paragraphs to aid in transitioning them.
+
+With qualifications out of the way...
+-------------------------------------------------------------------
+
+Growing up, I was always confu-scinated, on how writing in what essentially is a text file could make computers do things. In C, running "int c = 1;" makes the computer store the value of 1 somehwere. In Python, running "print(12345)" displays the number 12345 in the console. What I knew then was that computers store things in 1s and 0s, and those are certainly not 1s and 0s. So how do computers *know* what to do?
+
+Well, future me is here to tell you all about that process! (in 30k words or less, or more, I don't know yet)
 
 The file extensions you see in (Windows) computers are really all that special. ".docx" is really just a part of the filename, nothing else. The only thing the extension does is allow the operating system to know what program should open it. A ".docx" file is going to be opened by Word, a .txt file is going to be opened by notepad. To the OS, it knows what programs to open a file in by the text after the last period symbol in a filename. In a programming language, the ".py" extension allows the computer to know that it should be opened by the python interepreter. In C, ".c" in the C compiler (woah is that the topic of this website?)
 
@@ -24,8 +30,9 @@ Early history of computers as calculators
 
 Nowadays, computers do only three things: input/store infromation, process/operate on information, and output/display information. Give examples
 
-Humans are idiots. Yes, I want you to get that through your head. Our languages are complicated as hell. Computers on the other hand have what's called instructions. The basic instructions in machine code include storing memory and operating on memory
+Humans are idiots. Yes, I want you to get that through your head. Our languages are complicated as hell. Computers on the other hand have what's called instructions. The basic instructions in machine code include storing memory and operating on memory. Programming languages are a bridge from human language to machine code--it is readable to humans, and is easily translatable to binary.
 
+Some might ask 
 
 
 Sentence in human languages -> statements in code -> instructions in mahcine code
