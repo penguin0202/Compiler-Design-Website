@@ -1,4 +1,29 @@
+Perhaps this is news to some of you, it certainly was to young me, but when I essentialized programming language files to text files, I meant that the only difference between them is the extension in their file name, and that they both just contain plain text. Perhaps to some of you, "code" and "text" sounded fundamentally different, like code contained some additional information in the file for computers to be able to "execute" it when text files don't. That's a valid perspective to have, especially because, in my opinion, modern education generally fails to provide the the more accurate one to avoid this confusion. But really, writing code is the same as writing words. I mentioned that "[the Operating System] can either open the script in a text/code editor program like Notepad or Visual Studio Code to allow users to edit it". I deliberately chose to bundle the two programs because, aside from additional features, they can both edit code. Go ahead, try opening and editing a language file in Notepad, you'll find that after doing so, executing the file in Visual Studio Code still works with your updated code. If you really 
+
+
+Code files are really just what you type
+
+What's the point of a "code editor"? -> main attraction is syntax highliting (humans like things easy, will talk about this phrase later) -> syntax highlighting implies that a program can sort of understand what the code is trying to do--it can highlight variable names, function names, datatypes. Perhaps the computer CAN sort of understand what the code is trying to do... -> transitions into language "rules" in way later sections
+
+
+I personally think modern education doesn't highlight this enough
+
+
+
+
+
+
+
+
+
+ I should have lead with this to avoid confusion, but better late than never I guess.his might be news to some of you (sorry I didn't talk about this earlier). Maybe some of you thought 
+
+
 Somewhere talk about how some people might think language files are different form text file (intro this using my essentialization/equivelization of text files and coding files) maybe they think that because of syntax highlighting? Then say that syntax highlighting implies that the coding file contains information programs can use to determine variable names, values, control structures. Maybe computers 
+
+Then add onto that by saying text files are just bytes, 1s and 0ss, and computers operate on ones and zeroes. Suggest a connection.
+
+Start the next section with computrer "instructions" to build off of this section
 
 
 
