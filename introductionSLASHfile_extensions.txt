@@ -3,18 +3,23 @@ This is more of a testament of my ability to communicate out a my grasp of a con
 With qualifications out of the way...
 -------------------------------------------------------------------
 
-Growing up, I was always confused on how writing in what essentially is a text file could make computers do things. In C, running "int c = 1;" seemingly magically makes the computer store the value of 1 somewhere on the machine; in Python, running "print(12345)" displays the number 12345 in the console, almost as if the computer understood the meaning of "print"-ing text. What I knew then was that computers store and operated on things in ones and zeroes, on and off switches, and what anybody typed in a programming language script was certainly neither or those things; and that computers certainly did not have the "intelligence" of comprehending English. So how do computers actually know what to do when given a script in any particular programming language?
+Growing up, I was always confused on how writing in what essentially is a text file could make computers do things. In C, running "int c = 1;" seemingly magically makes the computer store the value of 1 somewhere on the machine; in Python, running "print(12345)" displays the number 12345 in the console, almost as if the computer understood the meaning of "print"-ing text. What I knew then was that computers store and operated on things in ones and zeroes, on and off switches, and what anybody typed in a programming script was certainly neither or those things; and that computers certainly did not have the "intelligence" to comprehend English. So how do computers actually know what to do when given a script in any particular programming language?
 
 For those of you who are also puzzled, do not fret, for I am here to explain everything about the process! (with some additional inessential and you-might-already-know information that I want to rant about)
 
 
-When a file is created, either by you or a program, its name usually ends with a file extension (e.g. ".docx" for Word documents, ".png" for P.N.G. images). But what exactly does the extensions do? Well, file extensions help the Operating System (O.S.; like Microsoft's Windows or Apple's MacBook) identify how to open a file. Take ".docx" for example: when you open a file ending in the extension, the O.S. searches through its catalog of programs to find one that is designed to open a .docx document, then it calls the program to open it (in this case, Microsoft Word). If extensions had not existed, the computer would have no idea how to differentiate between image files like .pngs and executable files like .exe, thus making it hard to do anything on a computer that involves manipulating files (which is a lot). This idea of extensions can be extended (see what I did there?) to programming scripts as well. When opening a, let's say, C language file, the O.S. can either open the script in a text/code editor program like Notepad or Visual Studio Code to allow users to edit it, or it can open the file, per the user's request, in a program that can "run" the file (which is the end goal of a script). That program is called a "compiler". I will backtrack and make-accurate this in the following section, but for now this is all you need to know: a compiler is a program that allows code in a file to be executed on a computer.
+When a file is created on a computer, either by you or a program, its name usually ends with a file extension (e.g. ".docx" for Word documents, ".png" for P.N.G. images). But what exactly do the extensions do? Well, file extensions help the Operating System (like Microsoft's Windows or Apple's MacBook) identify how to open a file. Take ".docx" for example: when you open a file ending in the extension, the Operating System (O.S.) searches through its catalog of programs to find one that is designed to open a .docx document, then it calls the program to open it (in this case, Microsoft Word). If extensions had not existed, the computer would have no idea how to differentiate between image files like .pngs and executable files like .exe, thus making it hard to do anything on a computer that involves files (which are a lot of things). This idea of extensions can be extended (see what I did there?) to programming scripts as well. When opening a, let's say, C language file, the O.S. can either open the script in a text/code editor program like Notepad or Visual Studio Code to allow users to edit it, or it can open the file, per the user's request, in a program that can "run" the file (which is the end goal of a script). That program is called a "compiler". I will backtrack and make-accurate this in the following section, but for now this is all you need to know: a compiler is a program that allows code in a file to be executed on a computer.
 
 
 A bit of a reflection on what I wrote (I don't care if this breaks the flow of ideas): 
+
 Note how I cold-opened with "When a file is created" might be a bit confusing
-My constant use of parenthesis if something I did not like.
+# nevermind, the title of this section has "file_extensions" in it; it might not be as confusing as I thought
+My constant use of parenthesis if something I did not like. (I don't care for now)
+
 Maybe elaborate on "involving manipulating files"?
+Operating Systems elaboration and what exactly that is 
+
 
 
 
