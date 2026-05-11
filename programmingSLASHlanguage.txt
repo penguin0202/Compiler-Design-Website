@@ -1,9 +1,10 @@
 Grammar. Grammar is what's at play here. But I am getting way ahead of myself ... or am I?
 
-"What is the purpose of a programming language" is central question of this section. (oh so I'm just straight up telling the reader this stuff; fucking great)
+"What is the purpose of a programming language" is central question of this section. (oh so I'm just straight up telling the reader this stuff; freaking awesome man)
 
-Quoting myself in my first section: "computers store and operated on things in ones and zeroes, on and off switches".
+Quoting myself in my first section: "computers store and operated on things in ones and zeroes, on and off switches". Don't worry about the specifics of the specific ones and zeroes that computers need in order to do a specific thing, that'll be elaborated on later. For now, just know that in order for computers to do anything, it needs instructions in the form of ones and zeroes. You could even say ones and zeroes are the language of the machine.
 
+The langauge of humans are much more complicated
 
 
 
