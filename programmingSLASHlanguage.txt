@@ -1,3 +1,12 @@
+Grammar. Grammar is what's at play here. But I am getting way ahead of myself ... or am I?
+
+"What is the purpose of a programming language" is central question of this section. (oh so I'm just straight up telling the reader this stuff; fucking great)
+
+Quoting myself in my first section: "computers store and operated on things in ones and zeroes, on and off switches".
+
+
+
+
 first part: programming: talk about what programming really is--send instructions for computer to do
 second part: language: talk about human langauge and its idiocy
 final comparison tying "prorgramming language" together-able to be read by humans, easily translatable (becasue of its structuredness) to machine code
