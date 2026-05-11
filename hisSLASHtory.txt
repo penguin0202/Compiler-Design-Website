@@ -1,6 +1,21 @@
-So programming languages are for both humans and computers to understand each other...hmmm interesting...
+So programming languages exist to be a mediator between ambiguous humans and rigid computers... interesting...
 
-Moving on. Let's look at the history of computers!
+Sidestepping once more: Let's look at the history of computers!
+
+what is my point here?
+calculators -> 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Why are mainstream programming langauges english? 

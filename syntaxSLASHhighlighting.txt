@@ -22,75 +22,15 @@ There is a point to my sidestepping into syntax highlighting just when you might
 
 
 
-
-
+NOTES: 
 
 How can a text file full of code run things on the computer? go fuck yourself
 
-
-
 I need to fucking elaborate on why text files can run things on the computer
 
-
-
-
-
-
-
-
-through syntax highlighting, seems to have some understanding 
-
-Almost as if computers CAN comprehend English...or perhaps there's something else at play...
-
-
-
-distinction between English language and programming "language"?
-
-
-What is it about syntax highlighting that is relevant to creating a programming language?
-
-Now why am I telling you about the reason about syntax highlighting? Well, I'm really more so 
-
 acknowledge that I went overboard with my explanation for syntax highlighting, that was mainly to explain to young me, to get it out of my chest. Now I would like to move forward->syhtax highlighting's existence
-
-So like, what exactly do I want you take away from this? Surely it's not that code editors provide
-
-I want the reader to notice that code editors, a program, through syntax highlighting, demonstrates that computer CAN possibly understand English. Or perhaps there's something else at play...
-
-"Grammar. Grammar is what's at play, but I'm getting way ahead of myself (or perhaps I'm planting the seeds of your understanding..... MWAHAHAHHAHAHAH)
-
-
-Surely
-
-
-
-I used the words "term", "word", and "element" a bit loosely here. Perhaps I can mention this in the lexer section where I refer to the then elements as tokens instead.
-
-So wait what exactly is the point of mentioning
-
-
-I broke down 
-
-Not about syntax highlighting, but the existence implies/contradicts my knowledge on how computer dont hav ethe intelligence of comprehending english..or perhaps there's something else at play
-
-
-
-
-
-So what am I really saying here?
-So what am I really wanting you to take with you here?
-
-
-
-
 
 I had these preconceived notion that syntax highlighting was how the computer knows to do stuff
 Believe or not, syntax highlighting has little/a lot of things in comon with compilers.
 
-
- humans have eyes and like distinction through colors, and scripts have parts that need distinctions. I will revisit this, but none of this is really my main point I want you to take away
-
-Well, what the point of a code editor then if a text editor can do the job? The answer to this question is much more interesting and is related to how I'm going to push you in the right direction in terms of the topic of this article. The answer is......SYNTAX HIGHLIGHTING!!!! Oh hey, I used the word syntax just three sentences ago (I wonder if I did that deliberately)
-
-
-What's the point of a "code editor"? -> main attraction is syntax highliting (humans like things easy, will talk about this phrase later) -> syntax highlighting implies that a program can sort of understand what the code is trying to do--it can highlight variable names, function names, datatypes. Perhaps the computer CAN sort of understand what the code is trying to do... -> transitions into language "rules" in way later sections
+transitions into language "rules" in way later sections

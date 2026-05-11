@@ -26,9 +26,7 @@ When a file is created on a computer, either by you or a program, its name usual
 
 
 
-
-
-
+NOTES: 
 
 I have not connected the dots on how one file can be opened by multiple programs.
 

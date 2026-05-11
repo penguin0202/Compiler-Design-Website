@@ -1,0 +1,1 @@
+I used the words "term", "word", and "element" a bit loosely in my syntax highlighting section. Perhaps I can mention this in the lexer section where I refer to the then elements as tokens instead.
