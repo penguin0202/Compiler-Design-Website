@@ -1,4 +1,6 @@
-Let's look at the history of computers
+So programming languages are for both humans and computers to understand each other...hmmm interesting...
+
+Moving on. Let's look at the history of computers!
 
 
 Why are mainstream programming langauges english? 

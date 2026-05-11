@@ -1,4 +1,4 @@
-I've added more intros than the hairs on my head. I'm constantly qualifying what I'm saying, wanting to set expectations up front but still keep the reader engaged. Perhaps this is fitting, after all, I do intend this *looks at the next paragraph--AHA* article to be a sort of introduction to other websites' introduction to compilers and programming languages.
+I've added more intros than the hairs on my balls. I'm constantly qualifying what I'm saying, wanting to set expectations up front but still keep the reader engaged. Perhaps this is fitting, after all, I do intend this *looks at the next paragraph--AHA* article to be a sort of introduction to other websites' introduction to compilers and programming languages.
 
 -------------------------------------------------------------------
 
@@ -7,7 +7,7 @@ This is more of a testament of my ability to communicate out my grasp of a conce
 With qualifications out of the way...
 -------------------------------------------------------------------
 
-Growing up, I was always confused on how writing in what essentially is a text file could make computers do things. In C, running "int c = 1;" seemingly magically makes the computer store the value of 1 somewhere on the machine; in Python, running "print(12345)" displays the number 12345 in the console, almost as if the computer understood the meaning of "print"-ing text. What I knew then was that computers store and operated on things in ones and zeroes, on and off switches, and what anybody typed in a programming script was certainly neither or those things,and that computers certainly did not have the "intelligence" to comprehend English. So how do computers actually know what to do and well, do them, when given a script in any particular programming language?
+Growing up, I was always confused on how writing in what essentially is a text file could make computers do things. In C, running "int c = 1;" seemingly magically makes the computer store the value of 1 somewhere on the machine; in Python, running "print(12345)" displays the number 12345 in the console, almost as if the computer understood the meaning of "print"-ing text. What I knew then was that computers store and operate on things in ones and zeroes, on and off switches, and what anybody typed in a programming script was certainly neither or those things,and that computers certainly did not have the "intelligence" to comprehend English. So how do computers actually know what to do and well, do them, when given a script in any particular programming language?
 
 For those of you who are also puzzled, good news!!! For I am here to explain everything about the process. (with some additional inessential information that I want to rant about)
 
