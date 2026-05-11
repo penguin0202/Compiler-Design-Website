@@ -1,15 +1,69 @@
 Grammar. Grammar is what's at play here. But I am getting way ahead of myself ... or am I?
 
-"What is the purpose of a programming language" is central question of this section. (oh so I'm just straight up telling the reader this stuff; freaking awesome man)
+Let's actually examine the purpose of a programming language: 
 
-Quoting myself in my first section: "computers store and operated on things in ones and zeroes, on and off switches". Don't worry about the specifics of the specific ones and zeroes that computers need in order to do a specific thing, that'll be elaborated on later. For now, just know that in order for computers to do anything, it needs instructions in the form of ones and zeroes. You could even say ones and zeroes are the language of the machine.
+Quoting myself in the first section: "computers store and operated on things in ones and zeroes, on and off switches". Don't worry about the specifics of the specific ones and zeroes that computers need in order to do a specific thing, that'll be elaborated on later. For now, just know that in order for computers to do anything, it needs instructions in the form of ones and zeroes. (You could even say ones and zeroes are the language of the machine, iykyk)
 
-The langauge of humans are much more complicated
+The langauges of humans on my other limb are much less rigid than ones and zeroes. Take the English langauge for example (get ready for a rapid-fire): 
+
+New words are created. Definitions of words evolve over time. Words with synonymous definitions have connocations that differently affect meaning. Meaninng that, rather than words, are sometimes conveyed through speaker tone and emotion.  
 
 
+
+different words of synonymous definitions can have connotations that impact the meaning of the sentence; sometimes those definitions can evolve over time. And sometimes new words are created through slang. Sometimes the culture of the speaker or the audience can impact the meaning of the sentences, regardless of the words.
+
+
+
+Definitions
+Connotations
+A lot of meaning is derived from the speaker's emotional tone, rather than the words itself. And sometimes the words themselves, if switched to even a synonym, would drastically change the meaning. And sometimes words are created out of thin air in the form of new slang words. And sometimes the definition of words evolve. Sometimes metaphors are employed so the words themselves don't really mean what they mean. Sometimes sarcasm is deployed instead, which can be context-dependent and not make the words mean what they mean. Sometimes over emphasizing certain words make sarcasm. Sometimes things need the current culture or social environment to understand. And perhaps the most well-known example of English is the ambiguity in referring to people. Sometime meaning is implied rather than directly said. Sometimes sentences are self-referential . Sometimes putting things in quotation marks somehow conveys a different thing
+
+This paragraph might seem like just a rant on a language, but my point here is that human languages (called "natural languages" from here on out)
+
+
+Words themselves: synonym, slang words, evolving definitions
+rahter than words themselves, speaker's emotional tone is sometimes what really counts.
+
+
+
+
+
+
+So yeah, English is pretty complicated and ambiguous at times.
+
+
+So what's all this gotta do with programming languages? Well, we as humans need to find a way to communicate to computers our intentions, computers who only "speak" ones and zeroes. We don't speak ones and zeroes (frankly, we don't want to), in fact, we speak "natural languages" that are far too messy and ambiguous for computers to understand. So we need find some sort of mediator, a intermediate language, or a bridge, if you will (see? A metaphor), that can connect human languages to machine language. Hmm...I wonder what that is...OH YEAH! It's a programming language! A programming language's purpose is for it to be easily understandable to humans (if you take the time to learn, that is), all the while maintaining a rigidity that can allow for it to be easily translated into ones and zeroes that computers can understand. (if you're wondering why programming languages seem distant from our natural langauges, this is the simplification of the why)
+
+I could have just ended this section with that last paragraph, but I want to really drive this idea home (another metaphor computers might take literally): as implied in the name itself, a "programming language" is designed to be a "language" that people can "program" computers in. (the language part is important later)
+
+
+
+It's far easier to translate modern English to cavemen language through translating it into an archaic form of English then cavemen, than it is to directly translate into a cavemen language.
+
+
+We need to have a way of communicating to computers our intentions. But it only accepts ones and zeroes, and we don't speak in ones and zeroes, in fact we speak in things much more complicated. We need a bridge (see? A metaphor) that connects our human language and machine language. And what do you know, that's what's called a programming language. A programming language's purpose is to be both more understanble to humans than ones and zeroes, and can be easily translated into ones and zeroes.
+
+
+
+
+Also has the problem of being overtly expressive--words are too long to read and write code in; but that's tangent.
+
+Also AI can make the english language a programming language i guess.
+
+Why am I talking about human langauges? Well humans want computers to do things
+
+
+
+
+
+
+We need some sort of way of  to the computer our intentions
 
 first part: programming: talk about what programming really is--send instructions for computer to do
 second part: language: talk about human langauge and its idiocy
 final comparison tying "prorgramming language" together-able to be read by humans, easily translatable (becasue of its structuredness) to machine code
 bridge between humans and machines
 briefly mention compilers which connects the language to the machine code
+
+Sources: 
+https://stackoverflow.com/questions/19262597/why-no-programming-in-english-what-is-the-difference-between-natural-languages
