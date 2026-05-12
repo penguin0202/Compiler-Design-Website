@@ -22,6 +22,7 @@ There is a point to my sidestepping into syntax highlighting just when you might
 
 
 
+
 NOTES: 
 
 How can a text file full of code run things on the computer? go fuck yourself
