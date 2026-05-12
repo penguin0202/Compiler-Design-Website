@@ -7,6 +7,9 @@ Sidestepping once more: Let's look at the history of computers! (and compilers)
 Now this section doesn't even remotely cover the whole history of computing. What I want to do here to give an overview of the achievements
 
 
+what computers fundamentally do--from the early calculators--input, process, output.
+
+
 
 what is my point here?
 calculators -> 

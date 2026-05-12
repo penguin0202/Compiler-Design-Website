@@ -1,9 +1,22 @@
+I said that "the only difference between [] is the extension in their file name"
+
+
+
+
+Let's talk about encoding -> compiler is just transforming a some binary into another binary; a text file into another text file. A compiler, is really just manipulates strings based on preestablished rules
+
+
+
 I want to cap off knowledges on scripts and text files and also transition topics to machine code and the idea of bits and bytes and also the idea of representation.
+
+"text" is not a property of the file itself. A program will blindly open a file thinking it's text and display the bytes, represented in text. Now a byte is 8 bits long. Some encodings--explanation of encodings--don't go all the way up theres
+
 
 I mentioned that 
 
+concept of encoding, representation, elaborating on how multiple programs can open the same file. Like it's just choosing what to display whatever it wants.
 
-Perhaps to some of you, "binary" seems elusive, like with "code" and "text", it seems to be a type of data unlike anything else. Transition phrase, it's not.
+Perhaps to some of you, "binary" seems elusive; like with "code" and "text", it seems to be a type of data unlike anything else. Transition phrase, it's not.
 
 Somewhere here talk about ASCII
 This conception is important: binary aren't special, they can all still be represented in text, there's nothing special about "ones and zeroes" because everything is ones and zeroes. The concept of a compiler is to convert ones and zeroes, read in the form of text in a script, into ones and zeroes that computers know what it means and what to do with. Compiler is just transforming one set of ones and zeroes into another set of ones and zeroes. Or if you want to invoke representations, one text into another text. If you want to boil it down, even beyond being a translator, a compiler is just a program that takes in a long string of text in a file, and outputs out another string of text in a file. It's string manipulation, that's what it is. It adheres to rules that turns one string into another. Through some special rules determine how a compiler turns a file full of (code) text and turn 
