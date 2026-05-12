@@ -11,7 +11,7 @@ So what's all this gotta do with programming languages? Well, we as humans need 
 I could have just ended this section with that last paragraph, but I want to really drive this idea home: as implied in the name itself, a "programming language" is designed to be a "language" that people can "program" computers in. (the language part is important for later)
 
 
-
+URGENT NOTE: MENTION HOW COMPILERS ARE WHAT TRANSLATES A PROGRAMMING LANGUAGE INTO ONES AND ZEROES FOR DA COMPUTER!!!!
 
 
 
@@ -21,73 +21,25 @@ I could have just ended this section with that last paragraph, but I want to rea
 
 NOTES: 
 
-distinction between English language and programming "language"?
-
 Add dashes here and there
-
 
 Sometimes the writer can shift perspectives, switching from an "I" to a "he". Punctuations, however people suggest, can also be not be rigid. More exclamation marks here, 
 
-
 it's ever changing. Sometimes, the structure of paragraphs has a meaning in of itself. Sometimes phrases like 
-
-
-
-
-
 
 ; even the punctuations. You may or may not have noticed my use of parenthesis; I think it allows me to express my thoughts much more clearly than if I'd been not doing so. Others might think it interrupts the flow of ideas. This is what our langauge allows for...
 
-
-
-People interpret the same books and yet may come to different conclusions. Intelligence gap? No, it's just the experiences we had that changed the way we react to the language. But sometimes there are correct uses of things in a language
-
-Why do humans speak liek this? I'm no expert
-
-different words of synonymous definitions can have connotations that impact the meaning of the sentence; sometimes those definitions can evolve over time. And sometimes new words are created through slang. Sometimes the culture of the speaker or the audience can impact the meaning of the sentences, regardless of the words.
-
-
-
-
-
-there's no right answer--different interpretations
+People interpret the same books and yet may come to different conclusions. Intelligence gap? No, it's just the experiences we had that changed the way we react to the language. But sometimes there are correct uses of things in a language. there's no right answer--different interpretations
 
 People interpret books differently
 reference to other things
-Punctuation. My own punctuation
-Sometimes sentences are self-referential.
-
-
-
-
-
+My own punctuation--Sometimes sentences are self-referential.
 
 It's far easier to translate modern English to cavemen language through translating it into an archaic form of English then cavemen, than it is to directly translate into a cavemen language.
-
-
-We need to have a way of communicating to computers our intentions. But it only accepts ones and zeroes, and we don't speak in ones and zeroes, in fact we speak in things much more complicated. We need a bridge (see? A metaphor) that connects our human language and machine language. And what do you know, that's what's called a programming language. A programming language's purpose is to be both more understanble to humans than ones and zeroes, and can be easily translated into ones and zeroes.
-
-
-
 
 Also has the problem of being overtly expressive--words are too long to read and write code in; but that's tangent.
 
 Also AI can make the english language a programming language i guess.
-
-Why am I talking about human langauges? Well humans want computers to do things
-
-
-
-
-
-
-We need some sort of way of  to the computer our intentions
-
-first part: programming: talk about what programming really is--send instructions for computer to do
-second part: language: talk about human langauge and its idiocy
-final comparison tying "prorgramming language" together-able to be read by humans, easily translatable (becasue of its structuredness) to machine code
-bridge between humans and machines
-briefly mention compilers which connects the language to the machine code
 
 Sources: 
 https://stackoverflow.com/questions/19262597/why-no-programming-in-english-what-is-the-difference-between-natural-languages
