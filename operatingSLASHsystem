@@ -1,1 +1,7 @@
 O.S. is a program. It starts from the hardware, so really, anytime you run a code that produces a program, it's really just the O.S. doing its thing. O.S. directly interfaces the hardware through assembly (credit to those people), and then we interface with the O.S. 
+
+Connecting back to the syntax highlighting section, the reason text files can run on a computer is because the O.S. is a program, and any program we run if really just part of IT
+
+"How can a text file full of code run things on the computer? go fuck yourself
+
+I need to fucking elaborate on why text files can run things on the computer" - syntax highlighting section

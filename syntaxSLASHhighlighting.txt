@@ -24,14 +24,4 @@ There is a point to my sidestepping into syntax highlighting just when you might
 
 
 NOTES: 
-
-How can a text file full of code run things on the computer? go fuck yourself
-
-I need to fucking elaborate on why text files can run things on the computer
-
-acknowledge that I went overboard with my explanation for syntax highlighting, that was mainly to explain to young me, to get it out of my chest. Now I would like to move forward->syhtax highlighting's existence
-
-I had these preconceived notion that syntax highlighting was how the computer knows to do stuff
-Believe or not, syntax highlighting has little/a lot of things in comon with compilers.
-
-transitions into language "rules" in way later sections
+acknowledge that I went overboard with my explanation for syntax highlighting, that was mainly to explain to young me, to get it out of my chest. 

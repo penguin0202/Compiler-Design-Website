@@ -6,3 +6,11 @@ We covered that programming languages are a
 
 
 I used the words "term", "word", and "element" a bit loosely in my syntax highlighting section. Perhaps I can mention this in the lexer section where I refer to the then elements as tokens instead.
+
+From the syntax highlighting section: 
+"I had these preconceived notion that syntax highlighting was how the computer knows to do stuff
+Believe or not, syntax highlighting has little/a lot of things in comon with compilers.
+
+transitions into language "rules" in this and later sections"
+
+programming languages, yes it's for computers, is also for humans. Humans like to look at words because that's just how we operate. Sure we can look at mathematical symbols, but sometimes, being more descriptive is way better on our eyes. This is why "code" are "words"

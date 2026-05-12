@@ -1,7 +1,12 @@
 I said that "the only difference between [] is the extension in their file name"
 
+text is really just a representation of ones and zeroes.
+
+"I have not connected the dots on how one file can be opened by multiple programs." - introduction/file extensions
 
 
+
+Ok now I'm going to blow all your minds out: every file is a text file. Now let me qualify that : everything *can* be a text file. What past me knew is true, computers store things in 1s and 0s. Then how are texts stored??? Well, they are't; they are really just *representations* of different 1s and 0s. In the ASCII table, every symbol (ok, English ones) can be mapped to a set of 1s and 0s (that are different from every other symbol's 1s and 0s). For example, the letter "A" can be 000000001, and the character "&" can be 00010011. Now I want to tagentlly refer to something else: a character's property is separate from its representation. Take the letter "O", if we somehow wrote the letter O like "╤", what would change? Well, the only thing that would change is how we write out the letter. The meaning of the letter O, as well as its compounds with other letters that form words would also not change. The only thing that changes is its representation. Now if wrote the letter O like "P" (like the letter P), what would change? well, words like hippo would become hippp, and then we wouldn't know how to pronounce it. So in a set of characters, the only thing that matters besides its property is its non-similarity as other characters in the set. This is what computers do--represent characters by assigning them a representation in 1s and 0s that differ from other characters' 1s and 0s.
 
 Let's talk about encoding -> compiler is just transforming a some binary into another binary; a text file into another text file. A compiler, is really just manipulates strings based on preestablished rules
 

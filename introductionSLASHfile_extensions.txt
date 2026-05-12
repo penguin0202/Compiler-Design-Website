@@ -29,7 +29,7 @@ When a file is created on a computer, either by you or a program, its name usual
 
 NOTES: 
 
-I have not connected the dots on how one file can be opened by multiple programs.
+tell the reader that I will elaborate a little more on Operating Systems when we get to that section
 
 "per the user's request"?? fuck you
 
@@ -40,25 +40,6 @@ Note how I cold-opened with "When a file is created" might be a bit confusing
 My constant use of parenthesis if something I did not like. (I don't care for now)
 
 Maybe elaborate on "involving manipulating files"?
-Operating Systems elaboration and what exactly that is 
-
-
-My point gets muddled a bit here, but hopefully it works out in the end:
-
-Speaking of that last part, I want to start by talking about my text file
-
-
-The file extensions you see in (Windows) computers aren't really all that special. ".docx" is really just a part of the filename, nothing else. The only thing the extension does is allow the operating system to know what program should open it. A ".docx" file is going to be opened by Word, a .txt file is going to be opened by notepad. To the OS, it knows what programs to open a file in by the text after the last period symbol in a filename. In a programming language, the ".py" extension allows the computer to know that it should be opened by the python interepreter. In C, ".c" in tit he C compiler (woah is that the topic of this website?)
-
-I used the word "text file" intentionally. Some, like past me, may be confused on why that is (perhaps this whole book is a letter to past me lessening his confusion). Aren't programming language files different from plain text files? WNo, the answer is no. Ok now I'm going to blow all your minds out: every file is a text file. Now let me qualify that : everything *can* be a text file. What past me knew is true, computers store things in 1s and 0s. Then how are texts stored??? Well, they are't; they are really just *representations* of different 1s and 0s. In the ASCII table, every symbol (ok, English ones) can be mapped to a set of 1s and 0s (that are different from every other symbol's 1s and 0s). For example, the letter "A" can be 000000001, and the character "&" can be 00010011. Now I want to tagentlly refer to something else: a character's property is separate from its representation. Take the letter "O", if we somehow wrote the letter O like "╤", what would change? Well, the only thing that would change is how we write out the letter. The meaning of the letter O, as well as its compounds with other letters that form words would also not change. The only thing that changes is its representation. Now if wrote the letter O like "P" (like the letter P), what would change? well, words like hippo would become hippp, and then we wouldn't know how to pronounce it. So in a set of characters, the only thing that matters besides its property is its non-similarity as other characters in the set. This is what computers do--represent characters by assigning them a representation in 1s and 0s that differ from other characters' 1s and 0s.
-
-
-
-Now I want to give a little background on computers. When computers were first invented, they were just calculators. Yes, those big ass rooms with that big ass computers that you see the picture that I hoped to put
-Anywho, perhaps it's time to discuss the 
-Before bytes
-Early history of computers as calculators
-
 
 Nowadays, computers do only three things: input/store infromation, process/operate on information, and output/display information. Give examples
 
