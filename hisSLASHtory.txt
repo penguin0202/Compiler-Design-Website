@@ -1,6 +1,12 @@
-So programming languages exist to be a mediator between ambiguous humans and rigid computers... interesting...
+Speaking of history (in the last section talked about IBM)...
 
-Sidestepping once more: Let's look at the history of computers!
+So programming languages exist to be a translator between ambiguous humans and rigid computers... interesting...
+
+Sidestepping once more: Let's look at the history of computers! (and compilers)
+
+Now this section doesn't even remotely cover the whole history of computing. What I want to do here to give an overview of the achievements
+
+
 
 what is my point here?
 calculators -> 
@@ -19,3 +25,6 @@ calculators ->
 
 
 Why are mainstream programming langauges english? 
+
+Sources: 
+https://www.computerhistory.org/timeline/software-languages/
