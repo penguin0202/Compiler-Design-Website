@@ -1,10 +1,36 @@
+How I'm going to write this section
+1. Cold open everything is ons and offs
+2. Ask how text is stored--binary
+3. Binary is elusive?
+4. encoding
+
+
+Oh boy do I have to do a lot of things this section
+
+At the hardware level, everything is just on and off switches.
+
+
+Perhaps this IS known to some of you, but I just want to get this off my chest: there is no such thing as "text" as a data stored on the computer
+
+Programs "interpret" the ons and offs however they like.
+
+Also state that "file extensions" are really just a bunch of people agreeing on how to format some type of data. (Really makes you think about the vulnerabilities, huh)
+So how do 
+The concept of interpretation...
+
+will introduce the idea of "Representation" -> later used to justify "int" or "if" or elements like that
+
+At the hardware level, every file is just ones and zeroes. 
+
+ultimate goal of this section: demystify compilers as some magic, and frame it as just a program that takes in a binary file that can be easily decoded into human-readable programming language, into a binary file that can computers can understand as instructions.
+
 I said that "the only difference between [] is the extension in their file name"
 
 text is really just a representation of ones and zeroes.
 
 "I have not connected the dots on how one file can be opened by multiple programs." - introduction/file extensions
 
-
+https://www.ascii-code.com/articles/Beginners-Guide-to-ASCII
 
 Ok now I'm going to blow all your minds out: every file is a text file. Now let me qualify that : everything *can* be a text file. What past me knew is true, computers store things in 1s and 0s. Then how are texts stored??? Well, they are't; they are really just *representations* of different 1s and 0s. In the ASCII table, every symbol (ok, English ones) can be mapped to a set of 1s and 0s (that are different from every other symbol's 1s and 0s). For example, the letter "A" can be 000000001, and the character "&" can be 00010011. Now I want to tagentlly refer to something else: a character's property is separate from its representation. Take the letter "O", if we somehow wrote the letter O like "╤", what would change? Well, the only thing that would change is how we write out the letter. The meaning of the letter O, as well as its compounds with other letters that form words would also not change. The only thing that changes is its representation. Now if wrote the letter O like "P" (like the letter P), what would change? well, words like hippo would become hippp, and then we wouldn't know how to pronounce it. So in a set of characters, the only thing that matters besides its property is its non-similarity as other characters in the set. This is what computers do--represent characters by assigning them a representation in 1s and 0s that differ from other characters' 1s and 0s.
 
@@ -36,8 +62,6 @@ Or in words I was talking about earlier, a compiler is a translator.
 
 An inessential information I wanted to talk about is WHY bytes and how they came to be. IBM and the need to represent things, the only way to do it is grouping things or something. And like IBM stepped in n shi.
 
-Speaking of hi
-
 I should have lead with this to avoid confusion, but better late than never I guess.his might be news to some of you (sorry I didn't talk about this earlier). Maybe some of you thought 
 
 Then add onto that by saying text files are just bytes, 1s and 0ss, and computers operate on ones and zeroes. Suggest a connection.
@@ -54,3 +78,11 @@ I mentioned "bytes", this section is kind of irrelevant to the whole of this boo
 You know what, I probably should have lead with this: why 8 bits? yes yes capitalism, but why group bits together? What's the benefit of that? Well.....hopefully future me figures it out.
 
 To bring these disconnected sections to a close, ora rather, to recap this: Every symbol in a programming language file are just bytes, which are just bits, which are just 1s and 0s. Hmm ... we know that computers do stuff when you put what is essentially 1s and 0s (electricity ons and offs) ... I wonder if there's a connection....
+
+
+
+Holy fucking shit what the fuck is this mess
+
+Sources: 
+
+https://stackoverflow.com/questions/32491925/why-do-bytes-exist-why-dont-we-just-use-bits
