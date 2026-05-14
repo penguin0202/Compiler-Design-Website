@@ -4,6 +4,16 @@ How I'm going to write this section
 3. Binary is elusive?
 4. encoding
 
+Topics: 
+encoding
+representation
+compiler demystifying
+young me failed to connect that compilers' input and output are just binary
+bytes
+
+I wrote before: "What I knew then was that computers store and operate on things in ones and zeroes, on and off switches, and what anybody typed in a programming script was certainly neither of those things". But is that true? That what anybody typed in a programming was neither ones and zeroes, on and off switches? If you couldn't tell, that was a rhetorical question, and the answer is no. No, anything you type in a script is really just ones and zeroes, on and off switches.
+
+But most of you probably knew that--that text, at the hardware level, is really just bytes, that is represented in a 
 
 Oh boy do I have to do a lot of things this section
 
