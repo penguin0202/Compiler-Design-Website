@@ -1,2 +1,7 @@
 goto
 registers
+
+we need to know what a programming langauge should do
+-- we need to know what a computer does and abstract it
+
+we know that programming languages is to translate binary machine code into a format humans can read
