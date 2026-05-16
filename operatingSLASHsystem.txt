@@ -5,3 +5,13 @@ Connecting back to the syntax highlighting section, the reason text files can ru
 "How can a text file full of code run things on the computer? go fuck yourself
 
 I need to fucking elaborate on why text files can run things on the computer" - syntax highlighting section
+
+What you might imagine is a program directly talks to the hardware to idk display stuff and do variable calcs
+But really, the O.S. handles everything--your programs interfaces with the O.S. rather than the hardware.
+
+O.S. already took care of how to directly interface with hardware
+
+Perhaps some conceptions of you guys is that since on a breadboard, there are speicific switches and programs
+have to do stuff with them, but the O.S. does that already\
+
+Since O.S. is a program, any program you run is already part of it

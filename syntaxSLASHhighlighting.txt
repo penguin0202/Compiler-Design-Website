@@ -15,7 +15,6 @@ So if I were to comprehensively pre-sum this bit-bloated section up, it would be
 There is a point to my sidestepping into syntax highlighting just when you might have the question of how a text file full of code can do things on a computer through a compiler (I will get to that incrementally). I wanted to draw your attention to syntax highlighting because its existence has some pretty interesting implications. At the start of this article, I mentioned how I thought "computers certainly did not have the "intelligence" to comprehend English" (by "English" I meant whatever is written in a programming language script). But as we've just talked about, code editor programs has the ability to highlight and thus differentiate keywords from variable names, comments from datatypes, and much more from operators. This seems to suggest computers has some semblance of understanding English; almost as if computers DO have the intelligence to comprehend our languages ... 
 
 ... or perhaps there's something else at play...(no, it's not A.I.)
-a
 
 
 

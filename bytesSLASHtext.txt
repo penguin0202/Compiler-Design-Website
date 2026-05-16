@@ -1,3 +1,30 @@
+What I really want to do in this article 
+
+What I want to increasingly do is s
+
+
+
+Relating back to file extensions, I want to give you another perspective on what compilers really do: 
+
+
+
+
+
+
+I want you to have another perspective on what compilers really do.
+
+
+
+Actually let's talk about my goal in this article: what I really want to do is simplify and de-magic-fy what a compiler really does. now I talked about (please update this) how compilers translate programming languages into ones and zeroes. I mentioned that what the bytes between text files and script files were the same. Now many of you might have known this, but text, by that I mean characters, is really stored as bytes, a group of 8 bits, bits being one or zero (on and off switches in the hardware level). I'm sure many of you know this, but when I was younger, I failed to realize the implication this has for compilers, since it's just transforming text into binary.
+
+Everything at the hardware level is just ons and off switches; what we in the software level call ones and zeroes.
+
+Now I acually want to go back to the file extension thing: W
+
+Expand on 
+
+
+
 How I'm going to write this section
 1. Cold open everything is ons and offs
 2. Ask how text is stored--binary
@@ -13,7 +40,7 @@ bytes
 
 I knew that text was just a representation of binary, and i know that computers operated on binary, but I never connected dots--that compilers are really just a program that takes a file as input (its binary that can be encoded into human-understandable text in the form of a programming language), and outputs another file (its binary that read a jumbled mess when represented in text) in the form of machine code. Transition into O.S. and how compilers can "run" code. Maybe something on .exe
 
-
+I know how to end this section. Say that compilers just take a file as input, then outputs another file. Ask question: "but how does a computer "run" it though?". Well.....transition into next section: O.S. as programs
 
 I wrote before: "What I knew then was that computers store and operate on things in ones and zeroes, on and off switches, and what anybody typed in a programming script was certainly neither of those things". But is that true? That what anybody typed in a programming was neither ones and zeroes, on and off switches? If you couldn't tell, that was a rhetorical question, and the answer is no. No, anything you type in a script is really just ones and zeroes, on and off switches.
 

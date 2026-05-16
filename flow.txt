@@ -1,0 +1,12 @@
+intro/extensions -> syntax highlighting -> "programming language" -> bytes and representation
+-> O.S. and programs -> Hardware and assembly (what do computers fundamentally do?)
+-> back to programming "language" for humans to understand/lexer/connection back to syntax highlighting
+-> syntax/words -> grammar/parser -> context/semantic analyzer -> optionally CFG -> possibly IR
+-> final assembly -> perhaps history of computers -> history of compilers
+-> differnt types of compilers (transpiler, assembler, interpreter, etc)-> go explore! you know everything now!
+
+Maybe CFG and IR be a footnote, that they are an even more intermediate language betwene the programming
+language and assembly. What Im trying to say here is that it's easier to convert English to an old
+version of English, then to cavemen noises, than it is to convert English straight to cavemen noises.
+
+"Not claiming expertise here, but here's where it dilutes" -- when starting IR generation.

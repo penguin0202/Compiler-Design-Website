@@ -1,3 +1,5 @@
+One thing I find infuriating is how people teach compiler design currently. They all seme to start too techinical, cramming words like "lexer", "parser", "tokens", "IR" into your heads and overhwlem you, blatantly ignoring the "language" part of a "programming language", etc. Now I'm not saying they aren't needed--these techinical teaching websites have their use. What I want to here today is not to bash them, I want to expand on them, or more accurately, overview-as-a-verb them. In other words, this piece of writing is the "introduction to the intoduction of programing language creation and compielr design".
+
 I've added more intros than the hairs on my balls. I'm constantly qualifying what I'm saying, wanting to set expectations up front but still keep the reader engaged. Perhaps this is fitting, after all, I do intend this *looks at the next paragraph--AHA* article to be a sort of introduction to other websites' introduction to compilers and programming languages.
 
 -------------------------------------------------------------------

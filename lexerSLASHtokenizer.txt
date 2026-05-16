@@ -2,6 +2,8 @@ This is the first section that will directly deal with compilers
 
 We covered that programming languages are a 
 
+Build on the human part of programmingSLASHlanguage.txt
+
 This might be some sort of surprise, but lexers and syntax highlighting actually has some pretty major connections (woah is that why I brought it up?) But also syntax highlighters do do parsing and semantic analyzing and possibly the CFG or some shi.
 
 
