@@ -2,17 +2,36 @@ What I really want to do in this article
 
 What I want to increasingly do is s
 
+At the hardware level, everything is just teeny-tiny on and off switches. Everything, ranging from documents to video files to apps. At the software level, we call these on and off switches "ones and zeroes"; binary, if you want to be fancy.
 
+So/But how do programs display and do vastly different things just based on a bunch of ones and zeroes? I highlighted before that you could compare the "bytes" between scripts and text files to see if they are really the same. But first, how do bytes, or more basically, ones and zeroes, get turned into text in the first place? The answer is interpretation (I might also use the word "representation"); programs "interpret" the ones and zeroes in their unique own ways, thus the difference in behavior and output on a computer.
+
+Firstly, some information about "bytes"
 
 Relating back to file extensions, I want to give you another perspective on what compilers really do: 
 
+I highlighted that you could compare the bytes between scripts and text files to see if they are really the same. This is probably know to all of you, but at the hardware level, everything is 
 
+Perhaps this is NOT news to some of you, but in the hardware level
+
+But if everything is just bytes
+
+How do programs know what bytes? You may ask
+
+
+In the syntax highlighting section, I highlighted that 
+
+I mentioned that scripts and text files 
 
 
 
 
 I want you to have another perspective on what compilers really do.
 
+
+
+
+I mentioned that the content, the "bytes" of scripts and text files are the same. 
 
 
 Actually let's talk about my goal in this article: what I really want to do is simplify and de-magic-fy what a compiler really does. now I talked about (please update this) how compilers translate programming languages into ones and zeroes. I mentioned that what the bytes between text files and script files were the same. Now many of you might have known this, but text, by that I mean characters, is really stored as bytes, a group of 8 bits, bits being one or zero (on and off switches in the hardware level). I'm sure many of you know this, but when I was younger, I failed to realize the implication this has for compilers, since it's just transforming text into binary.
