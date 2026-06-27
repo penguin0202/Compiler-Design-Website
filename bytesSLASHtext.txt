@@ -1,18 +1,38 @@
+
+talk about ASCII, and how it , and why it exists, why the way it is
+
+then turn into why ASCII needs 8 bits for each character
+
+
+Lasting impression -> representation
+
+
+
 What I really want to do in this article 
 
 What I want to increasingly do is s
 
 At the hardware level, everything is just teeny-tiny on and off switches. Everything, ranging from documents to video files to apps. At the software level, we call these on and off switches "ones and zeroes"; binary, if you want to be fancy.
 
-So/But how do programs display and do vastly different things just based on a bunch of ones and zeroes? I highlighted before that you could compare the "bytes" between scripts and text files to see if they are really the same. But first, how do bytes, or more basically, ones and zeroes, get turned into text in the first place? The answer is interpretation (I might also use the word "representation"); programs "interpret" the ones and zeroes in their unique own ways, thus the difference in behavior and output on a computer.
+So/But how do programs display and do vastly different things just based on a bunch of ones and zeroes? I highlighted before that you could compare the "bytes" between scripts and text files to see if they are really the same. But first, how do bytes, or more basically, ones and zeroes, get turned into text in the first place? The answer is, more broadly and what I want you to take away from this section, the idea of interpretation (I might also use the word "Representation").
+
+The A.S.C.I.I. table was the actual answer to my question; let's talk about what it is and does.
+The actual answer is the ASCII table.
+
+
+
+
+ is through the mapping of bytes a conversion table called A.S.C.I.I., which maps bytes to a respective text character, or more broadly and what I want you to take away from this section, the idea of interpretation (I might also use the word "representation").
+
+The ASCII table
+
+
+
+The answer is interpretation (I might also use the word "representation"); programs "interpret" the ones and zeroes in their unique own ways, thus the difference in behavior and output on a computer.
 
 Firstly, some information about "bytes"
 
 Relating back to file extensions, I want to give you another perspective on what compilers really do: 
-
-I highlighted that you could compare the bytes between scripts and text files to see if they are really the same. This is probably know to all of you, but at the hardware level, everything is 
-
-Perhaps this is NOT news to some of you, but in the hardware level
 
 But if everything is just bytes
 
