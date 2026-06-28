@@ -14,21 +14,16 @@ What I want to increasingly do is s
 
 At the hardware level, everything is just teeny-tiny on and off switches. Everything, ranging from documents to video files to apps. At the software level, we call these on and off switches "ones and zeroes"; binary, if you want to be fancy.
 
-So/But how do programs display and do vastly different things just based on a bunch of ones and zeroes? I highlighted before that you could compare the "bytes" between scripts and text files to see if they are really the same. But first, how do bytes, or more basically, ones and zeroes, get turned into text in the first place? The answer is, more broadly and what I want you to take away from this section, the idea of interpretation (I might also use the word "Representation").
+So/But how do programs display and do vastly different things just based on a bunch of ones and zeroes? I highlighted before that you could compare the "bytes" between scripts and text files to see if they are really the same. But first, how do bytes, or more basically, ones and zeroes, get turned into text in the first place? The answer is, more broadly and what I want you to take away from this section, the idea of interpretation (I might also use the word "representation").
 
-The A.S.C.I.I. table was the actual answer to my question; let's talk about what it is and does.
-The actual answer is the ASCII table.
+Some sort of history lesson.
+I promised myself I would move from specific examples into a more general idea, but I guess I failed at that here. The A.S.C.I.I. table was the actual answer to my question; let's talk about what it is and does. ASCII, or it's un-acronym-ed version, "American something charater is it", is a table (explain why I use the wor dtable here) that converts bytes (8-bits) into a respective text character (US english alphabet + symbols; explain significance later). It was created by the military, as sort of a successor to morse code, as a way to communicate using electrical signals, by assigning each possible byte to a character (alphabet (and its capitalized versions), number, special symbols). For example, 0000100 maps to the letter 'A', 00100111 maps to '2', and 11110000 maps to '&'. By mapping different bytes to different characters, the computer could then decide how to display them using bytes as input, in a sort of "if byte is 00000010", for example, "then put pixels on the screen in the shape of an A (shape stored using amth), adjusted for font, color and size of course".
 
+why are they arranged in a specific order? use of ASCII? use of ASCII now? other encoding methods? how computers "display" characters based on the bytes-> say something like somewhere on the computer, 
 
+programs "interpret" the ones and zeroes in their unique own ways, thus the difference in behavior and output on a computer.
 
-
- is through the mapping of bytes a conversion table called A.S.C.I.I., which maps bytes to a respective text character, or more broadly and what I want you to take away from this section, the idea of interpretation (I might also use the word "representation").
-
-The ASCII table
-
-
-
-The answer is interpretation (I might also use the word "representation"); programs "interpret" the ones and zeroes in their unique own ways, thus the difference in behavior and output on a computer.
+and in fact, any sort of data, as most of you know, are just bytes--text, images, videos, apps. So how do programs *know* how to differentiate between text and videos? answer: they don't; they interpret it however they want regardless. Data formatting?
 
 Firstly, some information about "bytes"
 
@@ -84,10 +79,6 @@ I know how to end this section. Say that compilers just take a file as input, th
 I wrote before: "What I knew then was that computers store and operate on things in ones and zeroes, on and off switches, and what anybody typed in a programming script was certainly neither of those things". But is that true? That what anybody typed in a programming was neither ones and zeroes, on and off switches? If you couldn't tell, that was a rhetorical question, and the answer is no. No, anything you type in a script is really just ones and zeroes, on and off switches.
 
 But most of you probably knew that--that text, at the hardware level, is really just bytes, that is represented in a 
-
-Oh boy do I have to do a lot of things this section
-
-At the hardware level, everything is just on and off switches.
 
 
 Perhaps this IS known to some of you, but I just want to get this off my chest: there is no such thing as "text" as a data stored on the computer
