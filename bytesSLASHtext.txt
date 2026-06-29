@@ -1,37 +1,20 @@
-
-talk about ASCII, and how it , and why it exists, why the way it is
-
-then turn into why ASCII needs 8 bits for each character
-
-
-Lasting impression -> representation
-
-
-
-What I really want to do in this article 
-
-What I want to increasingly do is s
-
 At the hardware level, everything is just teeny-tiny on and off switches. Everything, ranging from documents to video files to apps. At the software level, we call these on and off switches "ones and zeroes"; binary, if you want to be fancy.
 
-So/But how do programs display and do vastly different things just based on a bunch of ones and zeroes? I highlighted before that you could compare the "bytes" between scripts and text files to see if they are really the same. But first, how do bytes, or more basically, ones and zeroes, get turned into text in the first place? The answer is, more broadly and what I want you to take away from this section, the idea of interpretation (I might also use the word "representation").
+So then how do programs display and do vastly different things just based on a bunch of ones and zeroes? I highlighted before that you could compare the "bytes" between scripts and text files to see if they are really the same. But first, how do bytes, or more basically, ones and zeroes, get turned into text in the first place? The answer is, more broadly and what I want you to take away from this section, the idea of interpretation (I might also use the word "representation"). (Lasting impression -> representation)
 
 Some sort of history lesson.
-I promised myself I would move from specific examples into a more general idea, but I guess I failed at that here. The A.S.C.I.I. table was the actual answer to my question; let's talk about what it is and does. ASCII, or it's un-acronym-ed version, "American something charater is it", is a table (explain why I use the wor dtable here) that converts bytes (8-bits) into a respective text character (US english alphabet + symbols; explain significance later). It was created by the military, as sort of a successor to morse code, as a way to communicate using electrical signals, by assigning each possible byte to a character (alphabet (and its capitalized versions), number, special symbols). For example, 0000100 maps to the letter 'A', 00100111 maps to '2', and 11110000 maps to '&'. By mapping different bytes to different characters, the computer could then decide how to display them using bytes as input, in a sort of "if byte is 00000010", for example, "then put pixels on the screen in the shape of an A (shape stored using amth), adjusted for font, color and size of course".
+I promised myself I would move from specific examples into a more general idea, but I guess I failed at that here. The A.S.C.I.I. table was the actual answer to my question; let's talk about what it is and does. ASCII, or it's un-acronym-ed version, "American something charater is it", is a table (explain why I use the wor dtable here) that converts bytes (8-bits) into a respective text character (US english alphabet + symbols; explain significance later). It was created by the military, as sort of a successor to morse code, as a way to communicate using electrical signals, by assigning each possible byte to a character (alphabet (and its capitalized versions), number, special symbols). For example, 0000100 maps to the letter 'A', 00100111 maps to '2', and 11110000 maps to '&'. By mapping different bytes to different characters, the computer could then decide how to display them using bytes as input, in a sort of "if byte is 00000010", for example, "then put pixels on the screen in the shape of an A (shape stored using amth), adjusted for font, color and size of course" (somewhere in the computer it processes this). The use of this ASCII conversion table is very significant, as it allowed humans to store text (as binary data), which was originally sed for long distance electronic communication, just like morse code was. Now to go on a further tangent to answer a few question some might have about ASCII; for example, "why is it arranged in that way?" Well it's...idk...whoevers created just thought it was a great order to things. Back on track: ASCII's use in computers today to tell the computer what bytes mean in text is still in use (what's called "character encoding"). Other encoding methods: unicode, UTF-8, UTF-16, UTF-32. One thing to note is that ASCII only works for English (and Latin) chararacters, all other languages (Chinese, Arabic, etc) need an extended character encoding, like unicode and UTFs. One other thing to note is that originally when ASCII was created, as is the case now, it only needs 7 bits, not a full byte, which is 8 bits. I wonder what question I'm going to answer next...
 
-why are they arranged in a specific order? use of ASCII? use of ASCII now? other encoding methods? how computers "display" characters based on the bytes-> say something like somewhere on the computer, 
+Why are "bytes" 8 bits on modern systems? bytes are the smallest unit of measure of memory programs are allowed to manipulate (however you can add or shift bytes to get the result you want, but whatever), but why (some fo you may know that bytes are the smallest, but idk)? The answer is capitalism (this is going somewhere, trust). Originally, there were varying "bytes" in different computers made by different companies. But people, American people, figured that 7 bits wwas enough for the alphabet (also somewhere explain that 1 bit, 2 bit isn't enough for any special case of characters), special charcters and numbers (mentioned before), but since odd numbers are quite...odd to use in a binary (2) system, and since we should always strive for compactness, this all culminated in IBM's domination and unification of bytes system in their then new gen computers, which turned out to be only 8. This byte/encoding system then continued on into history. IBM's desire to dominate the market by choosing a "sweet spot" betwene the 16 and 4 and 6 bytes usage by other comapnies brought about this modern thing. (This idea of persistent tradition will somewhat be relevant to recursive compiler design later).
 
-programs "interpret" the ones and zeroes in their unique own ways, thus the difference in behavior and output on a computer.
+A little computer architecture history knowledge never hurt anybody (and is useful since compilers rely on that), but to bring it back to the topic at hand: if everything on a computer is just ones and zeroes/bytes, how do programs *know* whether one was of text, image, video, or executable? The answer? They don't. To answer the first question posed at the top of this section, programs "interpret" the ones and zeroes in their unique own ways, thus the difference in behavior and output on a computer. words to use? differentiate, data formatting, interpret it however they do regardless
 
-and in fact, any sort of data, as most of you know, are just bytes--text, images, videos, apps. So how do programs *know* how to differentiate between text and videos? answer: they don't; they interpret it however they want regardless. Data formatting?
+I guess for a good example would be images. Usually, an image is just an array of pixels. And each pixel, is stored through 3 consecutive bytes, for red, gren, and blue and how much of it (I am simplifying a bit; some prominent image formats like JPG have an additional alpha value for transparency; and there is metadata such as width and height, and compression algorithms, but you know, just in general). If this image file is read by an image viewer, it'll see the first byte, assume it's the value for red, move onto the next byte, interpret it as the value for blue, next byte green, then start the process again until the entire file is read. Now because  
 
-Firstly, some information about "bytes"
+
+
 
 Relating back to file extensions, I want to give you another perspective on what compilers really do: 
-
-But if everything is just bytes
-
-How do programs know what bytes? You may ask
 
 
 In the syntax highlighting section, I highlighted that 
@@ -39,7 +22,9 @@ In the syntax highlighting section, I highlighted that
 I mentioned that scripts and text files 
 
 
+What I really want to do in this article 
 
+What I want to increasingly do is s
 
 I want you to have another perspective on what compilers really do.
 
