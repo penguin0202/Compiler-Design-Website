@@ -9,7 +9,7 @@ Growing up, I was always confused on how writing in what essentially is a text f
 For those of you who are also puzzled, good news!!! For I am here to explain everything about the process. (with some additional inessential information that I want to rant about)
 
 
-When a file is created on a computer, either by you or a program, its name usually ends with a file extension (e.g. ".docx" for Word documents, ".png" for P.N.G. images). But what exactly do the extensions do? Well, file extensions help the Operating System (like Microsoft's Windows or Apple's MacBook) identify how to open a file. Take ".docx" for example: when you open a file ending in the extension, the Operating System (O.S.) searches through its catalog of programs to find one that is designed to open a .docx document, then it calls the program to open it (in this case, Microsoft Word). If extensions had not existed, the computer would have no idea how to differentiate between image files like .pngs and executable files like .exe, thus making it hard to do anything on a computer that involves files (which are a lot of things). This idea of extensions can be extended to programming scripts as well (see what I did there?). When opening a, let's say, C language file, the O.S. can open it in two ways. It can either open the script in a text/code editor program like Notepad or Visual Studio Code to allow users to edit it, or it can open the file, per the user's request, in a program that can "run" the file (which is the end goal of a script duh). That program is called a "compiler". I will backtrack and refine this in the following section, but for now this is all you need to know: a compiler is a program that allows code in a file to be executed on a computer.
+When a file is created on a computer, either by you or a program, its name usually ends with a file extension (e.g. ".docx" for Word documents, ".png" for P.N.G. images). But what exactly do the extensions do? Well, file extensions help the Operating System (like Microsoft's Windows or Apple's MacBook) identify how to open a file. Take ".docx" for example: when you open a file ending in the extension, the Operating System (O.S.; more on it in later sections) searches through its catalog of programs to find one that is designed to open a .docx document, then it calls the program to open it (in this case, Microsoft Word). If extensions had not existed, the computer would have no idea how to differentiate between image files like .pngs and executable files like .exe, thus making it hard to do anything on a computer that involves files (which are a lot of things). This idea of extensions can be extended to programming scripts as well (see what I did there?). When opening a, let's say, C language file, the O.S. can open it in two ways. It can either open the script in a text/code editor program like Notepad or Visual Studio Code to allow users to edit it, or it can open the file, per the user's request, in a program that can "run" the file (which is the end goal of a script duh). That program is called a "compiler". I will backtrack and refine this in the following section, but for now this is all you need to know: a compiler is a program that allows code in a file to be executed on a computer.
 
 
 
@@ -24,9 +24,6 @@ When a file is created on a computer, either by you or a program, its name usual
 
 
 NOTES: 
-
-tell the reader that I will elaborate a little more on Operating Systems when we get to that section
-
 "per the user's request"?? fuck you
 
 A bit of a reflection on what I wrote (I don't care if this breaks the flow of ideas): 

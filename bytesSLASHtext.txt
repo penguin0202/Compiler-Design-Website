@@ -1,15 +1,26 @@
-At the hardware level, everything is just teeny-tiny on and off switches. Everything, ranging from documents to video files to apps. At the software level, we call these on and off switches "ones and zeroes"; binary, if you want to be fancy.
+At the hardware level, everything is just teeny-tiny on and off switches. Everything, ranging from documents to video files to apps. At the software level, we call these on and off switches "ones and zeroes"; binary, if you want to be fancy. (this is the cold open)
 
 So then how do programs display and do vastly different things just based on a bunch of ones and zeroes? I highlighted before that you could compare the "bytes" between scripts and text files to see if they are really the same. But first, how do bytes, or more basically, ones and zeroes, get turned into text in the first place? The answer is, more broadly and what I want you to take away from this section, the idea of interpretation (I might also use the word "representation"). (Lasting impression -> representation)
 
 Some sort of history lesson.
-I promised myself I would move from specific examples into a more general idea, but I guess I failed at that here. The A.S.C.I.I. table was the actual answer to my question; let's talk about what it is and does. ASCII, or it's un-acronym-ed version, "American something charater is it", is a table (explain why I use the wor dtable here) that converts bytes (8-bits) into a respective text character (US english alphabet + symbols; explain significance later). It was created by the military, as sort of a successor to morse code, as a way to communicate using electrical signals, by assigning each possible byte to a character (alphabet (and its capitalized versions), number, special symbols). For example, 0000100 maps to the letter 'A', 00100111 maps to '2', and 11110000 maps to '&'. By mapping different bytes to different characters, the computer could then decide how to display them using bytes as input, in a sort of "if byte is 00000010", for example, "then put pixels on the screen in the shape of an A (shape stored using amth), adjusted for font, color and size of course" (somewhere in the computer it processes this). The use of this ASCII conversion table is very significant, as it allowed humans to store text (as binary data), which was originally sed for long distance electronic communication, just like morse code was. Now to go on a further tangent to answer a few question some might have about ASCII; for example, "why is it arranged in that way?" Well it's...idk...whoevers created just thought it was a great order to things. Back on track: ASCII's use in computers today to tell the computer what bytes mean in text is still in use (what's called "character encoding"). Other encoding methods: unicode, UTF-8, UTF-16, UTF-32. One thing to note is that ASCII only works for English (and Latin) chararacters, all other languages (Chinese, Arabic, etc) need an extended character encoding, like unicode and UTFs. One other thing to note is that originally when ASCII was created, as is the case now, it only needs 7 bits, not a full byte, which is 8 bits. I wonder what question I'm going to answer next...
+Specific examples, then move on to general ideas--is how I thought I'd be writing, but I guess I'm experimenting; The A.S.C.I.I. table was the actual answer to my question; let's talk about what it is and does. ASCII, or it's un-acronym-ed version, "American something charater is it", is a table (explain why I use the wor dtable here) that converts bytes (8-bits) into a respective text character (US english alphabet + symbols; explain significance later). It was created by the military, as sort of a successor to morse code, as a way to communicate using electrical signals, by assigning each possible byte to a character/symbol (alphabet (and its capitalized versions), number, special symbols). For example, 0000100 maps to the letter 'A', 00100111 maps to '2', and 11110000 maps to '&'. By mapping different bytes to different characters, the computer could then decide how to display them using bytes as input, in a sort of "if byte is 00000010", for example, "then put pixels on the screen in the shape of an A (shape stored using amth), adjusted for font, color and size of course" (somewhere in the computer it processes this). The use of this ASCII conversion table is very significant, as it allowed humans to store text (as binary data), which was originally sed for long distance electronic communication, just like morse code was. Now to go on a further tangent to answer a few question some might have about ASCII; for example, "why is it arranged in that way?" Well it's...idk...whoevers created just thought it was a great order to things. Back on track: ASCII's use in computers today to tell the computer what bytes mean in text is still in use (what's called "character encoding"). Other encoding methods: unicode, UTF-8, UTF-16, UTF-32. One thing to note is that ASCII only works for English (and Latin) chararacters, all other languages (Chinese, Arabic, etc) need an extended character encoding, like unicode and UTFs. One other thing to note is that originally when ASCII was created, as is the case now, it only needs 7 bits, not a full byte, which is 8 bits. I wonder what question I'm going to answer next...
 
-Why are "bytes" 8 bits on modern systems? bytes are the smallest unit of measure of memory programs are allowed to manipulate (however you can add or shift bytes to get the result you want, but whatever), but why (some fo you may know that bytes are the smallest, but idk)? The answer is capitalism (this is going somewhere, trust). Originally, there were varying "bytes" in different computers made by different companies. But people, American people, figured that 7 bits wwas enough for the alphabet (also somewhere explain that 1 bit, 2 bit isn't enough for any special case of characters), special charcters and numbers (mentioned before), but since odd numbers are quite...odd to use in a binary (2) system, and since we should always strive for compactness, this all culminated in IBM's domination and unification of bytes system in their then new gen computers, which turned out to be only 8. This byte/encoding system then continued on into history. IBM's desire to dominate the market by choosing a "sweet spot" betwene the 16 and 4 and 6 bytes usage by other comapnies brought about this modern thing. (This idea of persistent tradition will somewhat be relevant to recursive compiler design later).
+In computers, bytes are the smallest block of memory programs are allowed to manipulate/do operations at once. Although techniques such as bit-shifting, bit-masking (more on these below), or even just simple addition can allow programmers to read or write to individuals bits, whether that is storing characters or numbers (at least in the integer range of 0-255; any number greater than is going to need more bytes, but that's for later), the computer will not let you do anything on a bundle of bits smaller than 8. ...Quite arbitrary, it seems. Why is the smallest addressable (assembly connection) unit of memory on modern systems 8 bits (why isn't it 1 in the first place like it seems to should be)? Is it like, proven that manipulating 8 bits of memory at a time makes the computer run faster or something? ...Eh, Not exactly. The real reason bytes are 8 bits is ... *drum rolls please* CAPITALISM!!
+
+What's capitalism gotta do with all this, and was I just mentioning for the shock value? Let's go back to the beginning of computers: It's the 1960s?, every tech company is rushing to create their own computers with their own ideas of a perfect system to attract customers and developers. Some companies and people thought 4, 5 bits as the smallest memory is best, some thought 6, some thought 16. Each company competed with each other on this, and it was chaos (ok im exaggerating). Then, out came IBM, one of the biggest tech companies back in the day. Originally, there were varying "bytes" in different computers made by different companies. But people, American people, figured that 7 bits wwas enough for the alphabet (also somewhere explain that 1 bit, 2 bit isn't enough for any special case of characters), special charcters and numbers (mentioned before), but since odd numbers are quite...odd to use in a binary (2) system, and since we should always strive for compactness, this all culminated in IBM's domination and unification of bytes system in their then new gen computers, which turned out to be only 8. This byte/encoding system then continued on into history. IBM's desire to dominate the market by choosing a "sweet spot" betwene the 16 and 4 and 6 bytes usage by other comapnies brought about this modern thing. (This idea of persistent tradition will somewhat be relevant to recursive compiler design later). "if it aint broke, dont fix it", so history extends to now. Also backwards compatibility issues or something. Also mention 16-bit and 32 bit "words" and "quads".
+
 
 A little computer architecture history knowledge never hurt anybody (and is useful since compilers rely on that), but to bring it back to the topic at hand: if everything on a computer is just ones and zeroes/bytes, how do programs *know* whether one was of text, image, video, or executable? The answer? They don't. To answer the first question posed at the top of this section, programs "interpret" the ones and zeroes in their unique own ways, thus the difference in behavior and output on a computer. words to use? differentiate, data formatting, interpret it however they do regardless
 
-I guess for a good example would be images. Usually, an image is just an array of pixels. And each pixel, is stored through 3 consecutive bytes, for red, gren, and blue and how much of it (I am simplifying a bit; some prominent image formats like JPG have an additional alpha value for transparency; and there is metadata such as width and height, and compression algorithms, but you know, just in general). If this image file is read by an image viewer, it'll see the first byte, assume it's the value for red, move onto the next byte, interpret it as the value for blue, next byte green, then start the process again until the entire file is read. Now because  
+
+I guess for a good example would be images. Usually, an image is just an array of pixels. And each pixel, is stored through 3 consecutive bytes, for red, gren, and blue and how much of it (I am simplifying a bit; some prominent image formats like JPG have an additional alpha value for transparency; and there is metadata such as width and height, and compression algorithms, but you know, just in general). If this image file is read by an image viewer, it'll see the first byte, assume it's the value for red, move onto the next byte, interpret it as the value for blue, next byte green, then start the process again (read red, blue, green) until the entire file is read. Now because the data for images are just bytes, text editors can also edit them. The output from such would be something liek A&╖. See how the text editro is "interpreting" the bytes as characters using the ASCII table (btw, the text that gets interpreted into won't make sense if you read it, since the image file wasn't planned to be read as actual text (A&╖ would mean nothing))? Does this mean a text file, or realy any file, since they're all just bytes, can be opened by any program? yes (besides a few exceptions where some file types require a file to start with certain bytes, like pngs and their 00 FE start thingy, but in general...yes)!
+
+
+need to elaborate ont eh phrase smallest, unit of memory
+
+"modern systems"
+
+"8 is magical number?"
 
 
 
@@ -21,10 +32,7 @@ In the syntax highlighting section, I highlighted that
 
 I mentioned that scripts and text files 
 
-
-What I really want to do in this article 
-
-What I want to increasingly do is s
+What I want to (increasingly) do in this article is
 
 I want you to have another perspective on what compilers really do.
 
@@ -45,14 +53,12 @@ Expand on
 
 
 How I'm going to write this section
-1. Cold open everything is ons and offs
 2. Ask how text is stored--binary
 3. Binary is elusive?
 4. encoding
 
 Topics: 
 encoding
-representation
 compiler demystifying
 young me failed to connect that compilers' input and output are just binary
 bytes
@@ -76,8 +82,6 @@ The concept of interpretation...
 
 will introduce the idea of "Representation" -> later used to justify "int" or "if" or elements like that
 
-At the hardware level, every file is just ones and zeroes. 
-
 ultimate goal of this section: demystify compilers as some magic, and frame it as just a program that takes in a binary file that can be easily decoded into human-readable programming language, into a binary file that can computers can understand as instructions.
 
 I said that "the only difference between [] is the extension in their file name"
@@ -97,9 +101,6 @@ Let's talk about encoding -> compiler is just transforming a some binary into an
 I want to cap off knowledges on scripts and text files and also transition topics to machine code and the idea of bits and bytes and also the idea of representation.
 
 "text" is not a property of the file itself. A program will blindly open a file thinking it's text and display the bytes, represented in text. Now a byte is 8 bits long. Some encodings--explanation of encodings--don't go all the way up theres
-
-
-I mentioned that 
 
 concept of encoding, representation, elaborating on how multiple programs can open the same file. Like it's just choosing what to display whatever it wants.
 
