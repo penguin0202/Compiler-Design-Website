@@ -1,4 +1,27 @@
+Black box.
+
+At the hardware level, the cpu, once it has power, will execute any instruction (basic low-level instructions like storing variables by value; will be elaborated in the assembly section) it is given through electric signals (ons and off switches) [not always the case--see punch cards in the history section]. Operating systems are programs, remember that for now. It is a program stored on a usb stick (which stores data, like computers, in eelctric signals) taht is then pugged into the cpu, and once flipping the switch, will execute. The operating system...runs.
+
+what are some basic things it does? dunno
+
+Once a screen is plugged in, the operating system's code takes note, and begin displaying its loading screen. And soon after: the desktop. File explorers, background processes; everything begins to flow in place. Browsers, image editors, codespaces all downloaded. And once the codei editor is downloaded, the user starts writing code, runs it through the compilers........ then what?
+
+Well, the compiler "sends" the finished binary file (discussed earlier) that is full of a similar type of basic low-level instructions that the operating system is coded in, to the Operating system. The operating system takes note, as it's just a program, that a program inside the program is trying to do things on the computer, and sort of "adds" the program into its own programming. Since any program that is developed under the Operating system is part of the Operating system, the program is techinically "running" (help!). The purpose of operating system is to ensure the developer doesn't do anything stupid. The machine instructions the operating systems really are operate on the hardware, and the O.S. usually allow users to use them corerctly, which is why they have to be absolutely perfect; any hardware-wise mistake, like leaving an infinite while loop, is devastating; there is no failsafe in the machine world (ok maybe some c=microchips do, but you know waht I mean). That is why operating systems are built--to prevent coders from doing harmful things to the computer hardaware. It provides an interface between the hardware and the software. Software, as the name implies (but is not actually the case), is not as rigid. It has the operating system as fail safe. Ok back on track: once O.S. receives the code from the compiler (there is an interface for compilers "Sending" executables to O.S.; on windows, it is called "double-clicking ont he app"), adds the executable machine instructions onto the huge list of instructions the CPU has to do every nanosecond, and yeah voila! You got yourself a running program.
+
+You know what, that took a lot less words than I expected
+
+I really like the story narrative; influence by agents of shield?
+
+
+
+
+
+
+
+
 O.S. is a program. It starts from the hardware, so really, anytime you run a code that produces a program, it's really just the O.S. doing its thing. O.S. directly interfaces the hardware through assembly (credit to those people), and then we interface with the O.S. 
+
+Keep in mind, this section is heavily simplified and largely incorrect; what I am really trying to get at is the main idea
 
 Connecting back to the syntax highlighting section, the reason text files can run on a computer is because the O.S. is a program, and any program we run if really just part of IT
 

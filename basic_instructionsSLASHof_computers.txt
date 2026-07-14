@@ -1,3 +1,6 @@
+I talked about basic insutrctions CPU does. wHAT ARE THEY?
+
+
 goto
 registers
 
