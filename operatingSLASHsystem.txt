@@ -1,20 +1,40 @@
-At the hardware level, the Central Processing Unit (CPU) will execute any instruction it is given via electrical signals (basic low-level instructions like storing variables by value; will be elaborated in the next section !!!!!!). A collection of instructions to the CPU that performs some type of function, whether that is an image editor to, well edit images, or a videogame for entertainment, is what's called a "program".
+At the hardware level, the Central Processing Unit (CPU) will execute any instruction it is given via electrical signals (basic low-level instructions like storing variables by value; will be elaborated in the next/assembly section !!!!!!). A collection of instructions to the CPU that performs some type of function, whether that is an image editor to, well edit images, or a videogame for entertainment, is what's called a "program".
 
-Operating Systems, like Microsft's Windows and Apple's Mac, are actually just programs.
+And Operating Systems, like Microsft's Windows and Apple's Mac, are actually just programs.
 
-I say "actually just" because some, like me, might have thought operating systems were...different from regular "programs". After all, it's the first thing that pops up after turning the computer on, so it must be something that's embedded into the hardware or something, and not just a program. Plus it can't be just a a bunch of instructions sent the CPU if it's something you run custom bunches of instructions like videogames ON, right? These are very valid doubts, and I will trace what's happening when a computer turns on in a moment, but first, it's good to think about:
+I say "actually just" because some, like me, might have thought operating systems were...different from regular "programs". After all, it's the first thing that pops up after turning the computer on, so it must be something that's embedded into the computer's hardware or something, and not a software program. Plus it can't be just a a bunch of instructions sent the CPU if it's something you run custom bunches of instructions like videogames ON, right? These are very valid doubts, and I will trace the Operating System's role in a computer in a moment, but first, how about a question:
 
 What is something Operating Systems can do that programs running on them cannot?
 
-The layout of the Desktop? Equivalent to just buttons used in every app but just with custom images on top for the thumbnail. The taskbar at the bottom of the screen that one can navigate across one's open apps? Not much different from the tabs on top of browsers like Google Chrome to get to other websites. The ability to download outside apps and run them? You can download custom datapacks and mods to use in your Minecraft world. Well how about the hacker-type stuff like the command prompt that modifies the system? Surely that's out of the scope of regular programs? I hate to bring up Minecraft again, given not everybody have played it, but the slash command
+The layout of the Desktop? Equivalent to just buttons used in every app but just with custom images on top for the thumbnail. The taskbar at the bottom of the screen that one can navigate across one's open apps? Not much different from the tabs on top of browsers like Google Chrome to get to other websites. The ability to download outside apps and run them? You can download extensions for syntax highlighting for different programming languages in Visual Studio Coe editor and enable them. Well how about the hacker-type stuff like the command prompt that modifies the system? Well Minecraft's slash commands in text chat aren't all that dissimilar, given that they modify the world or the player in some way, like "/spawn ..." or "/tp @...".
 
-embedded into the hardware?
-which you run programs ON
+Other than using physical memory (oops spoilers), Operating Systems aren't different from regular programs. They too, are comprised of instructions. 
 
+
+
+
+
+
+
+
+
+
+
+These instructions are sent straight to the CPU right when the computer boots up, and that's why 
+
+
+
+
+
+
+But you could say they are a sort of specialized version of programs that encompasses all other programs. 
+
+
+In fact, you could call it a "special program" that encompasses all other programs. So it too, is comprised of instructions.
 
 Black box.
 
-At the hardware level, the cpu, once it has power, will execute any instruction (basic low-level instructions like storing variables by value; will be elaborated in the assembly section) it is given through electric signals . Operating systems are programs, remember that for now. It is a program stored on a usb stick (which stores data, like computers, in eelctric signals) taht is then pugged into the cpu, and once flipping the switch, will execute. The operating system...runs.
+Operating systems are programs, remember that for now. It is a program stored on a usb stick (which stores data, like computers, in eelctric signals) taht is then pugged into the cpu, and once flipping the switch, will execute. The operating system...runs.
 
 what are some basic things it does? dunno
 
