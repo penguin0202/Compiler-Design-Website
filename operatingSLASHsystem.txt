@@ -6,9 +6,9 @@ I say "actually just" because some, like me, might have thought operating system
 
 What is something Operating Systems can do that programs running on them cannot?
 
-The layout of the Desktop? Equivalent to just buttons used in every app but just with custom images on top for the thumbnail. The taskbar at the bottom of the screen that one can navigate across one's open apps? Not much different from the tabs on top of browsers like Google Chrome to get to other websites. The ability to download outside apps and run them? You can download extensions for syntax highlighting for different programming languages in Visual Studio Coe editor and enable them. Well how about the hacker-type stuff like the command prompt that modifies the system? Well Minecraft's slash commands in text chat (like "/spawn ..." or "/tp @...") aren't all that dissimilar, given that they modify the world or the player in some way.
+The layout of the Desktop? Equivalent to just buttons used in every app but just with custom images on top for the thumbnail. The taskbar at the bottom of the screen that one can navigate across one's open apps? Not much different from the tabs on top of browsers like Google Chrome to get to other websites. The ability to download outside apps and run them? You can download extensions for syntax highlighting for different programming languages in Visual Studio Code editor and enable them. Well how about the hacker-type stuff like the command prompt that modifies the system? Well Minecraft's slash commands in text chat (like "/spawn ..." or "/tp @...") aren't all that dissimilar, given that they modify the world or the player in some way.
 
-Really, other than using physical memory (oops spoilers), Operating Systems aren't different from regular programs. You can think of them as a special type of program that has the ability to encompass all others.
+Really, other than using physical memory (oops spoilers), Operating Systems aren't different from regular programs. They're merely a special type of program that has the ability to encompass all others.
 
 And since they are just programs, they too are comprised of instructions. Way simplifying here, but you could think of an Operating System as just code on a USB stick (which stores data, like computers, in electric signals) that is then plugged into the CPU to run once the computer turns on; which is actually why there's a splash screen when the computer is just booting up--it's the O.S. waking up and getting everything set up. 
 
@@ -16,18 +16,50 @@ Once the computer and operating system turns on, the desktop, file explorer, and
 
 Well, it's not all that incorrect to say that it already kind of did. Bear with me here: 
 
-The Operating System has a lot of jobs, one of which is a babysitter. Because normal developers aren't that equipped to deal with hardware level (low-level) instructions, especially when it comes to storing variables at specific memory addresses and handling the CPU when multiple programs need it at one time to perform each of their tasks, the Operating System is created to do all of that automatically. The O.S. is essentially a bridge between software and hardware: whenever a program needs to do some addition, division, bit manipulation, file input output, storing values in memory, or anything that involves the CPU, it quote sends unquotes the instruction to the Operating System, and let it do with it how it pleases. That's not how I wanted to phrase it, but the gist is that regular programs don't interact with the hardware directly, they actually interact with the Operating System only, with it interacting with the hardware with the program's given instructions. And the reason that our programs have to go through the Operating System is because the O.S. knows what it is doing--it helps debug and catch critical errors your programs might have. Examples of such errors include the much dreaded "Segmentation Fault", where the program reads or writes memory where it doesn't have access (such as another program's memory), "File not found" when accessing a non-existent file (probably due to typing the wrong filename), "Permission Denied" if the Operating System implements the ability to lock files behind users, "Division by 0", which is actually an error modern CPUs catches, but is still reported to the user via the Operating System, infinite while loops which is technically not an error, but isn't what anybody should want, and the very rare/occasional "Out of Memory" for when you've taken too many screenshots.
+The Operating System has a lot of jobs, one of which is a babysitter. Because normal developers aren't that equipped to deal with hardware level (low-level) instructions, especially when it comes to storing variables at specific memory addresses and handling the CPU when multiple programs need it at one time to perform each of their tasks, the Operating System is created to do all of that automatically. The O.S. is essentially a bridge between software and hardware: whenever a program needs to do some addition, division, bit manipulation, file input output, storing values in memory, or anything that involves the CPU, it quote sends unquotes the instruction to the Operating System, and let it do with it how it pleases. That's not how I wanted to phrase it, but the gist is that regular programs don't interact with the hardware directly, they actually interact with the Operating System only, with it then interacting with the hardware with the program's given instructions. And the reason that our programs have to go through the Operating System is because the O.S. knows what it is doing--it helps debug and catch critical errors your programs might have. Examples of such errors include the much dreaded "Segmentation Fault", where the program reads or writes memory where it doesn't have access (such as another program's memory), "File not found" when accessing a non-existent file (probably due to typing the wrong filename), "Permission Denied" if the Operating System implements the ability to lock files behind users, "Division by 0", which is actually an error modern CPUs catches, but is still reported to the user via the Operating System, infinite while loops which is technically not an error, but isn't what anybody should want, and the very rare/occasional "Out of Memory" for when you've taken too many screenshots.
 
 The most common types of errors the Operating System helps prevent are systemic, memory-related errors, and I wanna draw 3 connections from that: (1) this is the difference between Operating Systems and regular programs--the Operating System is a program that execute instructions and manage memory at the hardware level, while regular programs do so in a software level, in a sort of simulated memory (a "virtual memory", if you will), that is then dispatched to the O.S. for actual execution; (2) that it is very important Operating Systems exist to serve as safety nets for developers to prevent bad code getting to the level of hardware where there's no turning back (since the CPU will execute whatever instruction you give it; thus the remark of babysitter), and that is why there are so few mainline Operating Systems people use, because it takes a lot of work to ensure all bases are covered, and is also why a big team is behind major and feature-filled ones; and (3) the fact that pretty much only memoric errors could take place at this stage means the compiler actually did a lot of heavy lifting (finally brings it back to compilers, this guy). The compiler makes sure assigning undeclared variables gets thrown an error, functions get the correct number of arguments, of no duplicate variable naming, etc before converting the source code gets turned into machine instructions, so the Operating System doesn't have to.
 
-What was I talking about again? Oh right how the O.S. runs code. Yeah since the O.S. is in fact a running program, all you need to do run a program is to tell the O.S. to add it to its programming. You can either do that (using Windows as an example) by double-clicking on an .exe icon, which since it's merely an button on an interface, or run ".\MY_PROGRAM.exe" in the command prompt, which since it modifies the System directly, will all signal the O.S. to run a program. Once signalled, 
+What was I talking about again? Oh right how the O.S. runs code. Yeah since the O.S. is in fact a running program, all you need to do run your custom program is to tell the O.S. to add it to its programming. You can either do that (using Windows as an example) by double-clicking on an .exe icon in your folders, or run ".\MY_PROGRAM.exe" in the command prompt; both of which works because the interfaces--desktop or file explorers and command prompt--are already all part of the O.S. (desktop and file explorers in particular function just like buttons in app that signals the app do something), so the O.S. would automatically get the information that it should load the .exe's code into its own.
+
+But Operating Systems can't just sequentially add programs' code, that'll only allow it to run one program at one time (which is not what they do since I can both talk to my friends on Discord and record Valorant gameplay on OBS Studio at one time!), and that's where a thing called "CPU Scheduling" comes in. Ok I may have mislead you before, the O.S. doesn't really "add code to its programming", it more so disperses lines of code in between the long list of instructions it has the CPU run every nanosecond. Huh..In trying to correct myself, I've adequately described what I wanted to talk about next, yes, "[dispersing] lines of code in between the long list of instructions [the O.S.] has the CPU run every nanosecond" is exactly what CPU Scheduling is! CPU Scheduling is yet another job of the Operating System. It is intended to be a way to run multiple programs (seemingly to the human eye) concurrently by dividing each program's code that the O.S. receives and wants the CPU to run into smaller segments and
+inserting each segment into a different place in the 
+
+
+CPU state, context-switching, threading.
+
+
+
+dividing each program's code into smaller segments, intermingle with 
+
+
+
+
+
+
+
+
+
+
+After the Operating System receives the signal to run a program, 
+
+
+
+
+Acknowledge that I already answered the question of how O.S. runs code uh huh. maybe not idk.
+
+
+I lied a bit. disperses the code betwene the long list of instructions the O.S. has the CPU run every nanosecond.
+
+
+Once signalled, 
 
 
 start adding the program's code into their own and onto the CPU. And since they are in control
 
 
 
-
+"interface" not explained
 
 
  containing other sub-programs, any of their code is sort of technically part of the O.S.'s code, so all you need to "run" a program is to tell the it to add it to its programming.
@@ -62,8 +94,6 @@ mention embedded programming above
 
 Mention CPU scheduling
 
-It's part of a running program
-
 So did I say that "it kinda already did" just to further confuse you into reading more? Yes. Did I also do it just to feel smart and superior? Also Yes. So it is all that incorrect? No.
 
 "flip a switch" somewhere because hardware n shi
@@ -86,7 +116,7 @@ I really like the story narrative; influence by agents of shield?
 
 
 
-O.S. is a program. It starts from the hardware, so really, anytime you run a code that produces a program, it's really just the O.S. doing its thing. O.S. directly interfaces the hardware through assembly (credit to those people), and then we interface with the O.S. 
+O.S. directly interfaces the hardware through assembly (credit to those people)
 
 Keep in mind, this section is heavily simplified and largely incorrect; what I am really trying to get at is the main idea
 
