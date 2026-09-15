@@ -1,3 +1,29 @@
+So what are these "low-level" instructions that I keep alluding to? The answer is the dreaded Assembly language.
+
+Let me evade concepts I introduced once more.
+
+When I stated the Compiler's job is to turn human-readable code (bytes interpreted as text) into machine-readable code (bytes interpreted as ones and zeroes), I may have skipped a few steps. One of those steps is the conversion of human-readable code into Assembly. Before I get into the juicy part of my excitedly great metaphor for my next line of reasoning, let's answer the question: What is Assembly?
+
+
+
+. Anyways, one of the steps I skipped is the conversion of human-readable code into Assembly. Why? 
+
+
+
+
+
+Let me sidestep once more.
+
+
+The Assembly language, as dreaded as it is, is (usually) the 
+
+That's absurd, you say, 
+
+
+just like how converting from cavemen language into Englsih is hard, but tracing back and translating into previous versions of English is best!
+
+
+
 I talked about basic insutrctions CPU does. wHAT ARE THEY?
 
 
@@ -8,3 +34,5 @@ we need to know what a programming langauge should do
 -- we need to know what a computer does and abstract it
 
 we know that programming languages is to translate binary machine code into a format humans can read
+
+Quite a few actually, but don't worry, I'll talk about all of them in not-detail-because-I'm-not-that-smart in next sections
