@@ -2,22 +2,38 @@ So what are these "low-level" instructions that I keep alluding to? The answer i
 
 Let me evade concepts I introduced once more.
 
-When I stated the Compiler's job is to turn human-readable code (bytes interpreted as text) into machine-readable code (bytes interpreted as ones and zeroes), I may have skipped a few steps. One of those steps is the conversion of human-readable code into Assembly. Before I get into the juicy part of my excitedly great metaphor for my next line of reasoning, let's answer the question: What is Assembly?
+When I stated the Compiler's job is to turn human-readable code (bytes interpreted as text) into machine-readable code (bytes interpreted as ones and zeroes), I may have skipped a few steps. One of those steps is the conversion of human-readable code into Assembly code. Before I get into the juicy part of my excitedly great metaphor for my next line of reasoning, let's answer the question: What is Assembly?
+
+Assembly is, basically, machine code (which, remember, is not readable to humans when represented as text), that IS readable to humans (somewhat). Alright I'm making it more complicated that it is, let me rephrase: it is the last programming language in the chain of programming languages from high-level (think C and Python) to low-level (machine code) that is readable to humans (with itself classified as a low-level language). Whereas high-level languages use an English-like syntax, deal with memory in an abstract way, and contain quite understand-able control structures (if-else/while statements), low-level languages like Assembly and machine code use quite obscure abbreviations, deal with hardware memory directly, and use goto/jump instructions and labels to simulate human-understandable branches in code (code "branches" when, for example, the "if" condition is false and the "else" block code runs). Assembly, is just machine code translated, but not through direct byte-to-text, into English, basically.
+
+Assembly code might look something like this: (source (modified): https://pablocorbalann.medium.com/programming-a-hello-world-in-assembly-from-the-first-line-to-the-end-x86-9c48fb499238)
+
+1    section        .text         
+2    global         _start          
+3    _start:
+4        mov edx, len 
+5        mov ecx, msg 
+6        mov ebx, 1
+7        mov eax, 4
+8        int 0x80
+9        mov eax, 1
+10       int 0x80
+11   section        .data             
+12       msg        db "Hello world!", 0xa
+13       len        equ $ -msg
+
+
+That's absurd, you say, this is NOT readable AT ALL; it just looks like a bunch of random letters. To that I say: ...I agree. I'm not remotely competent enough to disagree because, guess what, I've never written a line of assembly before...So what makes me qualified to talk about this subject?
+
+..Moving on.
+
+I do know the basics of assembly though, which actual involves some computer architecture notions.
 
 
 
-. Anyways, one of the steps I skipped is the conversion of human-readable code into Assembly. Why? 
 
 
 
-
-
-Let me sidestep once more.
-
-
-The Assembly language, as dreaded as it is, is (usually) the 
-
-That's absurd, you say, 
 
 
 just like how converting from cavemen language into Englsih is hard, but tracing back and translating into previous versions of English is best!
