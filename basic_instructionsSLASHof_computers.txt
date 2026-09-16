@@ -6,21 +6,112 @@ When I stated the Compiler's job is to turn human-readable code (bytes interpret
 
 Assembly is, basically, machine code (which, remember, is not readable to humans when represented as text), that IS readable to humans (somewhat). Alright I'm making it more complicated that it is, let me rephrase: it is the last programming language in the chain of programming languages from high-level (think C and Python) to low-level (machine code) that is readable to humans (with itself classified as a low-level language). Whereas high-level languages use an English-like syntax, deal with memory in an abstract way, and contain quite understand-able control structures (if-else/while statements), low-level languages like Assembly and machine code use quite obscure abbreviations, deal with hardware memory directly, and use goto/jump instructions and labels to simulate human-understandable branches in code (code "branches" when, for example, the "if" condition is false and the "else" block code runs). Assembly, is just machine code translated, but not through direct byte-to-text, into English, basically.
 
-Assembly code might look something like this: (source (modified): https://pablocorbalann.medium.com/programming-a-hello-world-in-assembly-from-the-first-line-to-the-end-x86-9c48fb499238)
+Assembly code might look something like this (Assembly of the O.S. "Linux" version): 
 
-1    section        .text         
-2    global         _start          
-3    _start:
-4        mov edx, len 
-5        mov ecx, msg 
-6        mov ebx, 1
+1    section .data
+2        msg db "Hello World!", 0xa
+3        len equ $ - msg
+4    section .text
+5        global _start
+6    _start: 
 7        mov eax, 4
-8        int 0x80
-9        mov eax, 1
-10       int 0x80
-11   section        .data             
-12       msg        db "Hello world!", 0xa
-13       len        equ $ -msg
+8        mov ebx, 1
+9        mov ecx, msg
+10       mov edx, len
+11       int 0x80
+12       mov eax, 1
+13       xor ebx, ebx
+14       int 0x80
+
+This assembly program prints "Hello World!" to the console. Contrast that with C's version: 
+
+1    #include <stdio.h>
+2
+3    int main() {
+4        printf("Hello World!");
+5        return 0;
+6    }
+
+Or dare I mention Python's: 
+
+1    print("Hello World!")
+
+Assembly, while longer than other languages, is better described as more "expressive". The exemplary instance being the use of registers and system calls, as opposed to C's "printf" function. But before I get into that, let's talk about what those two things are.
+
+Registers are special pieces of memory right inside the CPU that it can access super-duper quickly that has two important qualities in the context of compilers:
+1. It is the basis of pretty much all computation. If you need to add two numbers and put the result somewhere else, you have to load the number from your memory address #1 into a register, load number from memory address #2 into another register, then tell the CPU to add the two registers together, which will put the result in the first register, then you'd have to copy the number at that register to the memory address you want to store the number at.
+2. It is a way for Operating Systems to know what kind of "system calls" it should do. System calls are basically a piece of software asking the Operating System to perform kernel-level (system-level) actions, such as reading from and writing to any console, specific memory addresses (besides registers), and files, and controling other hardware devices (kernel-level basically means unrestricted access to any and all computer components). And the way the O.S. knows what KIND of system call we want to perform, whether that's a print-to-console call, or an exit call (which, you guessed it, exits the program; it is a system call because the O.S. needs to know when it can reclaim the program's now-unused resources (memory)) is by the numbers inputted into select registers. For example, the "print" system call requires the "eax" register to be 4, the "ebx" register to be 1, "ecx" register to contain the memory address of where the actual string of what is to be printed, and register "edx" to be the length of the string. Then we write in a new line, "int 0x80", which will "int"errupt the program's execution, allow the O.S. to switch into kernel-mode, read the inputs from the registers, determine what kind of system call to execute, then finally execute it, printing the inputted string (as is the case in the assembly "hello world" program above, under the ".text" section; as you might have guessed, then, that "mov" was an instruction that tells the computer to put the second argument value into the first address). And for another example, to "exit" a program, we'd put 1 into the "eax" register, and 0 into register "ebx", then do the system call. It is worth noting that different Operating Systems have different system call methods. For Linux, "int 0x80" is the way to go; for Windows, simply write "syscall". It is also a given, then, that different Systems require different numbers to be put into registers to achieve the same desired system call (elaborate?). Phew that was a lot that could be structured better for reading. Anyways, for my sake and yours, this is the simplification for this quality of registers: if inputted with certain magical numbers, they can be used as a way for the Operating System to know what kind of system call--whether printing to console or reading from a file; anything that involves system-level actions--to execute, if explicitly written in Assembly (via the writing of "syscall" on Windows, for example). (side note: the Assembly language can call the O.S. since it is low-level, and will be directly translated into machine code, which definitely can interact with the Operating System)
+
+There are multitudes of ways assembly differs from higher-level language that I haven't begun to scratch the surface of, but I digress. The point (if I can recall it) is that the language requires people to really think about the step-by-step. If anybody had ever taught or introduced you programming by asking you to give exact sequential directions in order to make a peanut-butter and jelly sandwich without spreading the peanut-butter on the perpendicular side of the bread or completely forgetting to tell the person to open the jars (a really famous classroom activity that teaches the concept of needing precise, progressive instructions to allow a computer to achieve a goal, for those who don't know), just imagine the person needing you to tell them which neurons they should fire in their brain in order for some muscle in their arms to allow them to lift and grab the knife, and that's Assembly for ya (now you could imagine the reason for the dread).
+
+Remember all the way back when I casually mentioned yk translation of language to assembly? yeah that thing uh huh
+
+
+I haven't even begun to scratch the surface inside the world of Assembly, and I'm already exhausted writing this. Anyways, I'm not going to pretend I am experienced at all with this language, just know that 
+
+
+
+Anyways, I'm not going to pretend I am experienced at all with this language, so I'm 
+
+
+requires people to really think about the step-by-step. If anybody had taught you programming by asking you to give exact step-by-step directions in order to make a peanut-butter and jelly sandwich (really famous example of the concept of needing precise, progressive instructions to allow a computer to achieve a goal, for those who don't know)
+
+
+Because as you can see, I'm already up in arms trying to explain system calls, I cannot do any better than that
+
+
+
+And yes, Assembly can call the Operating System since it is low-level
+
+
+
+
+
+
+Phew that was a lot that could be structured better for reading. Anyways, 
+
+
+There is an order to the registers, and there are different calling conventions
+
+Linux uses int 0x80, windows is syscall
+
+
+Assembly can system call because it is low-level and, well, assembler handles all that
+
+
+
+
+
+context-switching
+
+
+
+
+
+(a cumbersome process, I agree, but it's how CPUs work)
+I'm not going to get through a rundown of how to code in Assembly, but I will run through this example to give you an idea of what Assembly's all about. 
+
+
+
+
+
+It requires coders to define actual global variables for string literals (literals meaning actual data, like the number 5, the boolean True, or the character 'a'), it requires 
+
+
+
+
+
+
+As opposed to C who allows coders to just "pass" a "string" to a "function" that'll magically tell the Operating System to print it to its console, Assembly requires the coders to manually define the string as a global variable, determine its length, 
+
+
+
+since a hellow rold program is such a headache
+
+managing each individual memory/registers individually, and putting all the pieces together.
+
+That's the other thing, assembly can sort of kind of directly mention operating systems in it, since yeah
+
 
 
 That's absurd, you say, this is NOT readable AT ALL; it just looks like a bunch of random letters. To that I say: ...I agree. I'm not remotely competent enough to disagree because, guess what, I've never written a line of assembly before...So what makes me qualified to talk about this subject?
@@ -29,14 +120,24 @@ That's absurd, you say, this is NOT readable AT ALL; it just looks like a bunch 
 
 I do know the basics of assembly though, which actual involves some computer architecture notions.
 
+[insert explanation of basic assembly instructions]
 
 
 
 
 
 
+We convert our programming language into assembly first, then machine code because of two reasons:
+(1) just like how converting from cavemen language into Englsih is hard, but tracing back and translating into previous versions of English is best!
+(2) because directly translating into machine code is quite difficult, so we can just translate into assembly, then have people who are smarter than us translate into machine code. This translation of assembly into machine code (since assembly is a type of programming language) is actual the job of a compiler!! wow. It is so specila of a type of compiler that it has its own name--assembler.
 
-just like how converting from cavemen language into Englsih is hard, but tracing back and translating into previous versions of English is best!
+So all we need to do to create a usable programming language is to translate it into assembly (which since it's code, a text file with the assembly's syntax) via our own compiler, and then let the assembler handle the rest of translating into machine code, then 
+
+
+
+
+
+
 
 
 
