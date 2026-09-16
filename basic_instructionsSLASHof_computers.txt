@@ -44,6 +44,26 @@ Registers are special pieces of memory right inside the CPU that it can access s
 
 There are multitudes of ways assembly differs from higher-level language that I haven't begun to scratch the surface of, but I digress. The point (if I can recall it) is that the language requires people to really think about the step-by-step. If anybody had ever taught or introduced you programming by asking you to give exact sequential directions in order to make a peanut-butter and jelly sandwich without spreading the peanut-butter on the perpendicular side of the bread or completely forgetting to tell the person to open the jars (a really famous classroom activity that teaches the concept of needing precise, progressive instructions to allow a computer to achieve a goal, for those who don't know), just imagine the person needing you to tell them which neurons they should fire in their brain in order for some muscle in their arms to allow them to lift and grab the knife, and that's Assembly for ya (now you could imagine the reason for the dread).
 
+Assembly, as convoluted as it may be, is the last human-readable (at least, only through intense learning and memorization of its syntax) programming language before its conversion into machine code, which would then be (pretty much) incomprehensible to our comprehension. I realize the difference between Assembly and machine code is explained quite abstractly by me, but that's...actually the point?? What the hell am I talking about?
+
+Remember when I said the job of a compiler to translate human code into machine code? I, sorta, lied. The job of a compiler nowadays [EMPHASIZE WHY I CHOSE "NOWADAYS"] is to translate human code into assembly! Converting to assembly is the last step in creating a programming language and its compiler. Why, you ask? Couple reasons for this.
+
+1. Translating directly into machine code is too difficult. Going back to the peanut-butter jelly sandwich example, machine code is more like asking you to tell the person which atoms comprising your arm should be at which position in space-time for it to be able to pick up the knife. And...
+2. There's already a tool that converts Assembly into machine code! Made by a bunch of smart people, this tool is called an Assembler! And I'll tell you a little secret
+
+Doesn't that seem impossible now that machine code seems so distant? Well good news! It's not anymore! The job of a compiler
+
+
+
+
+
+
+Let's get back on track: remember all the way back when I casually mentioned one of the steps in a compiler is converting your programming language into assembly? Yeah
+We're due to get back on track. 
+
+
+
+
 Remember all the way back when I casually mentioned yk translation of language to assembly? yeah that thing uh huh
 
 
@@ -61,19 +81,10 @@ Because as you can see, I'm already up in arms trying to explain system calls, I
 
 
 
-And yes, Assembly can call the Operating System since it is low-level
-
-
-
 
 
 
 Phew that was a lot that could be structured better for reading. Anyways, 
-
-
-There is an order to the registers, and there are different calling conventions
-
-Linux uses int 0x80, windows is syscall
 
 
 Assembly can system call because it is low-level and, well, assembler handles all that
