@@ -54,7 +54,14 @@ First and foremost: Machine code is too diffult to translate into directly. It's
 
 Last but not least: It's easier to debug if a programming language were to be translated into Assembly first, then to machine code. Since Assembly is still technically readable to humans, we can easily (*ahem* I meant difficult-ly but still able to) find sources of bugs by just scanning through the resulting assembly text file. With machine code, yeah we just can't do that...unless! Unless we run it through a "Disassembler"! Now class, if "Assembler"s convert assembly into machin code, what'll a "Disassembler" do? That's right! It converts machine code into Assembly! Albeit with some differences (despite their very similarity), one example of which being that Assembly allows for labels on pieces of code that can be referenced and jumped to in later sections, while machine code requires coders to specify jumps in code (which happens when you use if-statements or break-statements) IN BYTES (as in, how many bytes to jump ahead or behind). There's genuinely levels to this; going back to the peanut-butter and jelly sandwich demonstration, writing in machine code is basically asking you to tell the person the space-time position of each atom comprising your arm in order to lift up a knife. So yeah, it's just easier to debug in assembly if anything goes wrong in your code.
 
-Now a long way back to the metaphor I hyped up in the beginning: THERE WE GO!! I LIKE THIS CONTINUE THIS TOMORROW PLEASE 
+Now a long way back to the metaphor I hyped up in the beginning: 
+
+Let's say you were trying to translate English into cavemen noises (grunts) (bear with me). It'd be pretty hard, no? Buuttt if you were to translate modern English into an older version of English (like the use of "thou"), then into proto-germanic (*example here*), THEN into cavemen noises (if you couldn't tell, I'm tracing the history of the English language), it'd be a much easier process, no?
+
+Machin code is cavemne noises, and modern english is a high-level programming language. Assembly, is something like proto-human/pre-language
+
+
+THERE WE GO!! I LIKE THIS CONTINUE THIS TOMORROW PLEASE 
 
 
 
