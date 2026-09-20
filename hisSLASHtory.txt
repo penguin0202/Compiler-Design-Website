@@ -1,3 +1,12 @@
+This might be a jarring read, but I want to split this section up into two parts: 
+1. The section about the history of programming languages
+2. history of computers and the rise of programming langages
+3. types of programming languages
+
+Now that Assembly is introduced, I can finally follow in the linearity story telling I wanted to do.
+
+
+
 Speaking of history (in the last section talked about IBM)...
 
 So programming languages exist to be a translator between ambiguous humans and rigid computers... interesting...
@@ -17,8 +26,30 @@ calculators ->
 Now I want to give a little background on computers. When computers were first invented, they were just calculators. Yes, those big ass rooms with that big ass computers that you see the picture that I hoped to put
 
 
+assembly -> more programming languages created -> bootstrapping -> modern programming languages -> python is just c
+
+In fact, the Python programming language is just
+
+"wrapper"
+
+calculator history of computers
 
 
+types of programming languages - interpreter, assembler, transpiler, compiler, and boostrapping compilers
+
+Transpiler - connects to previous section - instead of translating into assembly and letting assembler handle translation to executable, why don't we just translate into another high-level programming language, like c or python, and let their compiler handle the rest. ANSWER: YOU CAN TOTALLY DO THAT!!! (EXCEPT I THINK IT'S NOT A "TRUE" PROGRAMMING LANGUAGE IF YOU ALLOW ANOTHER TO DO MAJORITY OF THE WORK FOR YOU; THE LEAST YOU CAN DO IS TRANSLATE INTO ASSEMBLY IMO) That is called a special version of a compiler, "transpiler"
+
+Assembler: we've already talked about; a translator of assembly and machine code (and the vice versa of disassembler)
+
+Interpreter: is a special case. Instead of translating from a text file into a text file, it 
+
+
+High-Level  Python
+            C
+            Zig
+            LLVM IR
+            Assembly
+Low-Level   Machine Code
 
 
 

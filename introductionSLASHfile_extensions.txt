@@ -15,13 +15,15 @@ When a file is created on a computer, either by you or a program, its name usual
 
 
 
+Do not be intimidated by the section titles, I swear they are a lot less complicated than they seem (plus I'm not explaining them "in-depth", as I wish this website serves as an "introduction)
 
 
 
 
 
+How people teach compiler and programming language creation currently irks me. They all seem to start too technical, cramming words like "parser", "semantics", and "intermediate representation" into your heads and overwhelm you. Sure, these technical teaching websites have their use, but they don't properly serve as "introductions" to compiler design; as in, the language of which they use to discuss concepts of programming languages are too complex for an average coder to understand. It's like they need an introduction to their introductory compielr learning resource. Wait a minute...
 
-
+Im goign to discuss aspects of programming langauges and compilers most don't rope in the comtext of.
 
 
 NOTES: 

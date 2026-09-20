@@ -11,7 +11,7 @@ So what's all this gotta do with programming languages? Well, they are a sort of
 
 
 
- Well, we as humans need to find a way to communicate to computers our intentions, computers who only "speak" ones and zeroes. We don't speak ones and zeroes, and frankly, we don't want to. In fact, we speak "natural languages" that are far too messy and ambiguous for computers to understand. So how do we communicate with one another? Perhaps 
+Well, we as humans need to find a way to communicate to computers our intentions, computers who only "speak" ones and zeroes. We don't speak ones and zeroes, and frankly, we don't want to. In fact, we speak "natural languages" that are far too messy and ambiguous for computers to understand. So how do we communicate with one another? Perhaps 
 Perhaps there's an intermediate language that can be easily read by us, and be translated into ones and zeroes....?!
 
 
@@ -20,7 +20,7 @@ So we need find some sort of mediator, a intermediate language, or a bridge, if 
 
 perhaps there exists a language that can be translated into ones and zeroes, and can be read by humans...hmm...
 
- that is the simplification of the answer--that programming langauges removes the ambiguous flows of human language. As implied in the name, a "programming language" is designed to be a "language" people can be able to "program" computers in (the "language" part is very important later).
+that is the simplification of the answer--that programming langauges removes the ambiguous flows of human language. As implied in the name, a "programming language" is designed to be a "language" people can be able to "program" computers in (the "language" part is very important later).
 
 
 
