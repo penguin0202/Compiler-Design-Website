@@ -31,7 +31,7 @@ And..That's it folks. Let's recount the steps we took to run code
 3. O.S. receives the instructions (either by the developer double-clicking on the resulting .exe binary file created by the compiler, or the compiler automatically running the run command in the command prompt program) and, whilst catching run-time errors like segmentation faults, then sprinkles them throughout the list of instructions the CPU already needs to do (a process called CPU scheduling). Which they can do because they are the first program to run and only to interact with the hardware, giving them whole access and control over the CPU (search kernel mode and operating rings/accesses in programming for more info)
 4. CPU, maybe interacting with other components of hardware like the monitor or the sound system, executes those instructions
 
-Voila/And oh my stars and garters. A program runs.
+And oh my stars and garters. A program runs.
 
 
 CPU state, context-switching, threading.
