@@ -4,7 +4,7 @@ So then how do programs display and do vastly different things just based on a b
 
 Zooming on text specifically: I highlighted before that you could compare the bytes between scripts and text files to see if they are really the same. But how do bytes get turned into words in the first place? The answer, more broadly and what I want you to take away from this section, is the idea of "interpretation" (or I might use the word "representation").
 
-The actual answer to that question is through a concept called the "ASCII Table". A.S.C.I.I., or its un-acronym-ed version, "American Standard Code for Information Interchange", is a conversion table that that translates bytes (8-bits) into a respective textual character (letters like 'a'). Creation led by an IBM engineer, its purpose is to allow for (English) characters--letters (capitalized and not), numbers, punctuation, miscellaneous symbols, spaces, and line breaks (have to represent newline somehow)--to be mapped to a set of electronic signals a computer can store, and thus communicate with. Think of it as a successor to morse code for computers: whereas 3 dots followed by 3 long dashes and then another 3 dots [...------...] translates to "SOS" in morse code, the byte sequence "01010011", followed by "01001111", and then another "01010011" in binary spells out the same thing in ASCII (a help signal!). By assigning different bytes to different characters, the computer could then decide, well, what characters to display using those bytes as input.
+The actual answer to that question is through a concept called the "ASCII Table". A.S.C.I.I., or its un-acronym-ed version, "American Standard Code for Information Interchange", is a conversion table that that translates bytes (8-bits) into a respective textual character (letters like 'a'). Creation led by an International Business Machines Corporation (IBM; a very large tech company back in the day) engineer, its purpose is to allow for (English) characters--letters (capitalized and not), numbers, punctuation, miscellaneous symbols, spaces, and line breaks (have to represent newline somehow)--to be mapped to a set of electronic signals a computer can store, and thus communicate with. Think of it as a successor to morse code for computers: whereas 3 dots followed by 3 long dashes and then another 3 dots [...------...] translates to "SOS" in morse code, the byte sequence "01010011", followed by "01001111", and then another "01010011" in binary spells out the same thing in ASCII (a help signal!). By assigning different bytes to different characters, the computer could then decide, well, what characters to display using those bytes as input.
 
 The logic of the computer sort of goes like: "if inputted byte needing to be drawn as a character is 01100001...let's check the ASCII table I have here...oh it's the letter 'a'! Then put pixels on the screen in the shape of an A at the specified position on the screen (communicates that information to the display monitor), adjusted for font, color, and size of course".
 
@@ -18,7 +18,7 @@ Although techniques such as bit-shifting, bit-masking (more on these below), or 
 
 What's capitalism gotta do with all this, and was I just mentioning it for the shock value and engagement-bait? Let's go back to the beginning of computers: 
 
-It's the 1960s-70s. Computer engineering companies are popping in and out of the market, and each of them have different ideas about how to "bundle" data: some thought a group of 4 bits would be sufficient because that's enough to represent all numeral digits (2^4=16 bits could encompass numbers 0-9), some thought 5 bits would be better because it allowed for the addition of negative signs, some thought 6 bits were extra-ly better because it was divisible by two, which would be easier to work with in biary, and some thought 12 bits were more useful because it allowed the storage of two English characters (only capitalized or in-lowercase letters though, can't do both, because the 2^6=64 is only 12 available character codes more than 26*2=52 letters, and we'll still need to add in digits, punctuation, and other control characters) in one "group". But then, out comes the A.S.C.I.I. table, who encompasses the majority of the English language and the most "essential" control characters. IBM saw the potential a "standardized" bundle of bits, the byte, could bring to the company--investments--I mean to the world--order. Having the "norm" for the "smallest addressable unit of memory" established in the Computer Science field was revolutionary, and so IBM manufactured its computers using the 8-bit model ("sweet spot", as some woudl call it, because ASCII is 7-bits and because multiples of two is just generally better to work with when computing, thus the closest bit-number to 7, 8), and this became the convention all the way to this day. I guess I should say the phrase "if it ain't broke, don't fix it" also has a hand in a "byte" being 8-bits too, because, so far, there hasn't been any major problems with using the 8-bit byte besides I guess the tediousness of needing variable-length encoding for a larger set of characters, but that is offset-ed by the fact that it is still compact/as-small enough but still able to represent negative numbers (in other words, the closest developers can get to managing individual bits but still be able to easily group data).
+It's the 1960s-70s. Computer engineering companies are popping in and out of the market, and each of them have different ideas about how to "bundle" data: some thought a group of 4 bits would be sufficient because that's enough to represent all numeral digits (2^4=16 bits could encompass numbers 0-9), some thought 5 bits would be better because it allowed for the addition of negative signs, some thought 6 bits were extra-ly better because it was divisible by two, which would be easier to work with in biary, and some thought 12 bits were more useful because it allowed the storage of two English characters (only capitalized or in-lowercase letters though, can't do both, because the 2^6=64 is only 12 available character codes more than 26*2=52 letters, and we'll still need to add in digits, punctuation, and other control characters) in one "group". But then, out comes the A.S.C.I.I. table, who encompasses the majority of the English language and the most "essential" control characters. I.B.M. saw the potential a "standardized" bundle of bits, the byte, could bring to the company--investments--I mean to the world--order. Having the "norm" for the "smallest addressable unit of memory" established in the Computer Science field was revolutionary, and so IBM manufactured its computers using the 8-bit model ("sweet spot", as some woudl call it, because ASCII is 7-bits and because multiples of two is just generally better to work with when computing, thus the closest bit-number to 7, 8), and this became the convention all the way to this day. I guess I should say the phrase "if it ain't broke, don't fix it" also has a hand in a "byte" being 8-bits too, because, so far, there hasn't been any major problems with using the 8-bit byte besides I guess the tediousness of needing variable-length encoding for a larger set of characters, but that is offset-ed by the fact that it is still compact/as-small enough but still able to represent negative numbers (in other words, the closest developers can get to managing individual bits but still be able to easily group data).
 
 As I'm writing this, the Visual Studio Code Editor "UTF-8" encoding banner on the bottom-right reminds me that this is probably why the English language is ever the widespread--through the development of computers, convention, and the Internet. 
 
@@ -28,39 +28,45 @@ Sure there's the conquering of lands before then, but who do I write like, a his
 
 Probably also why programming languages are typically just English letters and punctuation too.
 
-So to summarize that teeny tiny computer architecture exposition, bytes get turned into words when it is "interpreted" using the ASCII table. Great.
+Anywhoohas, so to summarize that teeny tiny computer architecture exposition, bytes get turned into words when it is "interpreted" using the ASCII table. Great. Now to bring it back to the topic at hand, by that I mean the first question posed: how do programs DO different things if everything, and I mean everything on a computer, is just bytes? The answer? Is that they don't, actually. Programs interpret the ones and zeroes in their unique ways, regardless of context, thus the difference in behavior and output on a computer. I'm explainly it poorly, and quite abstractly. So let's give an example: 
+
+Take images; usually, an image is just an array (finite list) of pixel data. In each pixel data, is stored 3 consecutive bytes, e.g. [1110000, 01000111, 01010111]: for how much of red, green, and blue should the display monitor show for a location on the screen (I am simplifying it a bit; some prominent image formats like .JPG have an additional alpha value for amount of transparency, and there is meta data such as width and height, and compression algorithms; but you know, I'm talking just in general). If this image file is read by an image viewer (like the "Photos" App on Windows or your Camera on your phone), it'll read the first byte, assume it's the value for red, ove onto the next byte, interpret it as the value for blue, next byte green, then start the process again, read from red, blue, then green, until the entire file is read (or "parsed" if you wanna be fancy). Now because the data for images are just bytes, text editors can also read them. Sure the text editor like Notepad or Visual Studio Code might throw a warning, saying something like "this file is a .jpg and would most likely be unintelligeble to read as text", the truth is, you CAN open it, it's just that what's displayed WILL be something among the lines of (excerpt from an image of mine copied from opened Notepad): 
+
+뎓棈왫䘛⊕骒謣閽䳸瓀�奝ᕹ�泤鱣㖳涧졗㭲Ꞛ펶틞䰝ꐂ紩䭝嬮ᄸ�ଆ䂡乘⼙ᾅ敫�쥌鉛ᖙ靫䪌䇣ꇫ艽좯喏䙧鍢왙胉᢫巙睭gՏ嫅땫ᵴ鲣筨粻깼঎೓ ꒏꾨＀㷫챵这勺븯跖쩹₟쐁腟祜魩דּၹు羆材᥻猐Თ棲ꟳ깊텳趑�뎋풥휼矠푒჌�貞路了屻ﵫ诪复荁湸꣋ϐ詁⛟䍗ᤤ♋驝糁푒禤랭媕뜗⥫쳯鿖ꋳᦛ鲚䕡�縍⛛撸�誑察㝧딨죿=棦跇㵩�徽骨谱労뭗鿥䵊襪징
+
+It's all gibberish; like the bytes were translated into characters (unicode; see the Chinese symbols and emoji?), but it's completely meaningless. When read by a proper image editor though, the results are, well, a proper image. 
+
+Helpfully, everytime you open a .jpg image file, the Operating System, like Windows, will automatically assist you in selecting the appropriate software to open it, in this case, the Photos app, based on the file extension, .jpg.
+
+So does this all mean that every file can *technically* be an image or text file since it's all just bytes? Yes! But whether it "works" how you intended is a whole 'nother story (besides a few exceptions where some file types require a file to start with certain bytes, dubbed "magic numbers", like pngs and zip files; not going through those here)
+
+since it's all just bytes?
+
+
+but whether it "works" how you intended is a whole 'nother story
+
+helping you out
+
+Some people might still be a little hesitant because everytime they want to open a file, it'll automatically open in
+
+the truth is that the operating system is assisting you due to fiel extension
 
 
 
-Anywhoohas, let's find the track here to get back on it.
+let's find the track here to get back on it.
 
 
 (also backwards compatibility, don't reinvent the wheel type shi)
 
 Mention word, quad?
 
-Also why websites just have text
-
-as im writing this, "UTF-8" appears at the bottom right of my visula studio code
-
-In a way, this is how English became a dominant language
-
-
-created by them that would allow them to dominate the Computer Engineering field, and well
-
-
-
-
-I wanna say that I'm going to keep on track 
-
-
 why use word "Table"
 
 The actual answer to my bytes and text question
-Some sort of history lesson.
 Specific examples, then move on to general ideas--is how I thought I'd be writing, but I guess I'm experimenting;
 
-What's capitalism gotta do with all this, and was I just mentioning for the shock value? Let's go back to the beginning of computers: It's the 1960s?, every tech company is rushing to create their own computers with their own ideas of a perfect system to attract customers and developers. Some companies and people thought 4, 5 bits as the smallest memory is best, some thought 6, some thought 16. Each company competed with each other on this, and it was chaos (ok im exaggerating). Then, out came IBM, one of the biggest tech companies back in the day. Originally, there were varying "bytes" in different computers made by different companies. But people, American people, figured that 7 bits wwas enough for the alphabet (also somewhere explain that 1 bit, 2 bit isn't enough for any special case of characters), special charcters and numbers (mentioned before), but since odd numbers are quite...odd to use in a binary (2) system, and since we should always strive for compactness, this all culminated in IBM's domination and unification of bytes system in their then new gen computers, which turned out to be only 8. This byte/encoding system then continued on into history. IBM's desire to dominate the market by choosing a "sweet spot" betwene the 16 and 4 and 6 bytes usage by other comapnies brought about this modern thing. (This idea of persistent tradition will somewhat be relevant to recursive compiler design later). "if it aint broke, dont fix it", so history extends to now. Also backwards compatibility issues or something. Also mention 16-bit and 32 bit "words" and "quads".
+but since odd numbers are quite...odd to use in a binary (2) system
+(This idea of persistent tradition will somewhat be relevant to recursive compiler design later).
 
 
 A little computer architecture history knowledge never hurt anybody (and is useful since compilers rely on that), but to bring it back to the topic at hand: if everything on a computer is just ones and zeroes/bytes, how do programs *know* whether one was of text, image, video, or executable? The answer? They don't. To answer the first question posed at the top of this section, programs "interpret" the ones and zeroes in their unique own ways, thus the difference in behavior and output on a computer. words to use? differentiate, data formatting, interpret it however they do regardless
