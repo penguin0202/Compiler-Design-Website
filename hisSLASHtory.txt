@@ -5,6 +5,14 @@ This might be a jarring read, but I want to split this section up into two parts
 
 Now that Assembly is introduced, I can finally follow in the linearity story telling I wanted to do.
 
+The earliest "programming language" were "punch cards". They were basically EXPLANATION. There were no "compilers" at the time, because the input IS just binary code (holes represent 0?).
+
+After that, assembly was introduced. Using a technique that you, the reader, can implicitly extrapolate the basic idea of how it's done further into the reading of this website and after a proper introduction to programming language creation. Compiler needed to translate assembly into binary.
+
+Then most famous C
+
+Blah blah.
+
 
 
 Speaking of history (in the last section talked about IBM)...
@@ -35,7 +43,7 @@ In fact, the Python programming language is just
 calculator history of computers
 
 
-types of programming languages - interpreter, assembler, transpiler, compiler, and boostrapping compilers
+types of programming languages - interpreter, assembler, transpiler, compiler, and boostrapping compilers; boostrap explain how important good compilers are created, as if there's a bug in the previous iteration of the language, it's fucking game over sheeple.
 
 Transpiler - connects to previous section - instead of translating into assembly and letting assembler handle translation to executable, why don't we just translate into another high-level programming language, like c or python, and let their compiler handle the rest. ANSWER: YOU CAN TOTALLY DO THAT!!! (EXCEPT I THINK IT'S NOT A "TRUE" PROGRAMMING LANGUAGE IF YOU ALLOW ANOTHER TO DO MAJORITY OF THE WORK FOR YOU; THE LEAST YOU CAN DO IS TRANSLATE INTO ASSEMBLY IMO) That is called a special version of a compiler, "transpiler"
 
