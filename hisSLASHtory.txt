@@ -13,6 +13,8 @@ Then most famous C
 
 Blah blah.
 
+Calculator -> punch cards -> assembly -> need for compilers -> 
+
 
 
 Speaking of history (in the last section talked about IBM)...
@@ -70,3 +72,5 @@ Why are mainstream programming langauges english?
 
 Sources: 
 https://www.computerhistory.org/timeline/software-languages/
+
+https://www.ibm.com/history/punched-card
