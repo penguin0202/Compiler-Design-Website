@@ -6,6 +6,10 @@
     padding: 0px 10px;
 }
 
+body {
+    margin-left: 230px;
+}
+
 h1 {
     text-align: center;
 }
