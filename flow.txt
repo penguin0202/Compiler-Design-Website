@@ -10,3 +10,8 @@ language and assembly. What Im trying to say here is that it's easier to convert
 version of English, then to cavemen noises, than it is to convert English straight to cavemen noises.
 
 "Not claiming expertise here, but here's where it dilutes" -- when starting IR generation.
+
+grammar and programming "language" connection not closed in programmingSLASHlanguage.txt
+
+Idiots pretensiouly rants about programming lanaguages, compilers, and things of the sort.
+Idiots pretends to be knowledgable in the field of programming languages, compilers, and other things of the sort.
