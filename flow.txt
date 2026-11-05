@@ -15,3 +15,11 @@ grammar and programming "language" connection not closed in programmingSLASHlang
 
 Idiots pretensiouly rants about programming lanaguages, compilers, and things of the sort.
 Idiots pretends to be knowledgable in the field of programming languages, compilers, and other things of the sort.
+
+Nowadays, computers do only three things: input/store infromation, process/operate on information, and output/display information. Give examples
+
+Sentence in human languages -> statements in code -> instructions in mahcine code
+
+The basic instructions in machine code include storing memory and operating on memory
+
+It's far easier to translate modern English to cavemen language through translating it into an archaic form of English then cavemen, than it is to directly translate into a cavemen language.
