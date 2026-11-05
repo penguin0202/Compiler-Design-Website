@@ -42,7 +42,7 @@
 
         <ol>
             <li>Developer writes (high-level) code for a program in a code editor in a selected programming language</li>
-            <li>Compiler translates that code into (executable) binary instructions through some process I will talk about, all the while checking for any compile-time errors (BTW REFERENCE THIS LINE THE NEXT SECTION AND TALK ABOUT LOW-LEVEL INSTRUCTIONS LIKE ASSEMBLY).</li>
+            <li>Compiler translates that code into (executable) binary instructions through some process I will talk about, all the while checking for any compile-time errors.</li>
             <li>O.S. receives the instructions (either by the developer double-clicking on the resulting .exe binary file created by the compiler, or the compiler automatically running the run command in the command prompt program) and, whilst catching run-time errors like segmentation faults, then sprinkles them throughout the list of instructions the CPU already needs to do (a process called CPU scheduling). Which they can do because they are the first program to run and only to interact with the hardware, giving them whole access and control over the CPU (search kernel mode and operating rings/accesses in programming for more info)</li>
             <li>CPU, maybe interacting with other components of hardware like the monitor or the sound system, executes those instructions</li>
         </ol>
@@ -54,38 +54,17 @@
 <script src="../dynamicContentResize.js"></script>
 </html>
 
-<!--CPU state, context-switching, threading.
+<!--CPU state, context-switching, threading.z
 
-
-
-Acknowledge that I already answered the question of how O.S. runs code uh huh. maybe not idk.
-
-start adding the program's code into their own and onto the CPU. And since they are in control
-
-
-
-"interface" not explained
-
-
-In code, there isn't actually a difference between OS code and regular program code (from now on simply referred to as program, not regular program). It's just that simply OS code is there from the start, and they know how to initilize everything. Once you knwo how to do that, you can create your own OS (some have!).
+It's just that simply OS code is there from the start, and they know how to initilize everything. Once you knwo how to do that, you can create your own OS (some have!).
 
 If you're wondering why instructions and memory are tied together, it's because they are irl.
 
-computers actually execute instructions that are stored in memory, since everything's binary
-
 mention pointers?
-
-There's only few main O.S., Unless you're linux I guess.
-
-What the compiler produces, the assembly, actually just mention virtual memory, that the O.S. then actually map onto physical memory.
 
 Mention registers
 
 mention embedded programming above
-
-So did I say that "it kinda already did" just to further confuse you into reading more? Yes. Did I also do it just to feel smart and superior? Also Yes. So it is all that incorrect? No.
-
-"flip a switch" somewhere because hardware n shi
 
 Remember, what I mean by "code" is human-readable, "instruction" is machine-readable.
 
@@ -93,8 +72,6 @@ Remember, what I mean by "code" is human-readable, "instruction" is machine-read
 Black box.
 
 Well, the compiler "sends" the finished binary file (discussed earlier) that is full of a similar type of basic low-level instructions that the operating system is coded in, to the Operating system. The operating system takes note, as it's just a program, that a program inside the program is trying to do things on the computer, and sort of "adds" the program into its own programming. Since any program that is developed under the Operating system is part of the Operating system, the program is techinically "running" (help!). The purpose of operating system is to ensure the developer doesn't do anything stupid. The machine instructions the operating systems really are operate on the hardware, and the O.S. usually allow users to use them corerctly, which is why they have to be absolutely perfect; any hardware-wise mistake, like leaving an infinite while loop, is devastating; there is no failsafe in the machine world (ok maybe some c=microchips do, but you know waht I mean). That is why operating systems are built--to prevent coders from doing harmful things to the computer hardaware. It provides an interface between the hardware and the software. Software, as the name implies (but is not actually the case), is not as rigid. It has the operating system as fail safe. Ok back on track: once O.S. receives the code from the compiler (there is an interface for compilers "Sending" executables to O.S.; on windows, it is called "double-clicking ont he app"), adds the executable machine instructions onto the huge list of instructions the CPU has to do every nanosecond, and yeah voila! You got yourself a running program.
-
-You know what, that took a lot less words than I expected
 
 I really like the story narrative; influence by agents of shield?
 
@@ -104,19 +81,13 @@ Keep in mind, this section is heavily simplified and largely incorrect; what I a
 
 Connecting back to the syntax highlighting section, the reason text files can run on a computer is because the O.S. is a program, and any program we run if really just part of IT
 
-"How can a text file full of code run things on the computer? go fuck yourself
-
 I need to fucking elaborate on why text files can run things on the computer" - syntax highlighting section
 
 What you might imagine is a program directly talks to the hardware to idk display stuff and do variable calcs
 But really, the O.S. handles everything--your programs interfaces with the O.S. rather than the hardware.
-
-O.S. already took care of how to directly interface with hardware
 
 Perhaps some conceptions of you guys is that since on a breadboard, there are speicific switches and programs
 have to do stuff with them, but the O.S. does that already\
 
 
 (ons and off switches) [not always the case--see punch cards in the history section]
-
-"intermingle"-->

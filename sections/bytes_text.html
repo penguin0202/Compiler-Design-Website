@@ -24,7 +24,7 @@
 
         <p>Why are specific bytes plotted to specific characters, you may ask? They have their reasons; for example, capitalized letters are one bit switch away from each other ('A' is 01000001, and 'a' is 01100001) to allow for easy conversion, and control characters (null character, space, tabs, new line, carriage return, page break (deprecated, mostly), etc) are placed near the top (near byte "00000000") to distinguish them from "regular" characters to avoid confusion. (I encourage you to explore the intended ordering of ASCII, as I find it a fascinating history)</p>
 
-        <p>Originally used for teletypewriters, ASCII is now widely used in modern computers to "encode" characters (character encoding just means "encrypting" characters into another form, in this case, binary). But it is important to note that the ASCII table ONLY encodes English-adjacent characters; Chinese symbols and Arabic words, for example, have no way of being represented in binary, both because in history, ASCII was only intended for American/European communication, and that the total distinct combinations of a byte, 256, is not enough to encompass every character from all across the world (for reference: the world has over 7000 separate languages with their own unique words and symbols in writing). So...how does one solve this? (side note: I feel obligated to note that accurately representing every language's symbols is mandatory if we want to live in a fair world under the Internet) We solve it by...creating another character conversion table that translates into more than just one byte! That character encoding system is called "Unicode"! If you had ever used emojis before, you may be familiar with the term "unicode". Unicode is basically an (exaggeratively exponentially) extended ASCII table that (theoretically) allows every language's character, accented or otherwise (like 'ú' or '和'), emoji (like '😍'), and mathematic symbol (like '√') to be mapped to a set of bytes; 1 to 4 of them depending on the encoding "method". If you'd ever typed in Microsoft's Windows 11 Notepad, or made a website using HTML, you might come across a thing called "UTF-8". "UTF-X" is an encoding method for Unicode that decides how many bits (X number of them) is (minimally) used to represent one character (up to use of 4 bytes). UTF-8 means a single character can be represented from 1 byte to 4 bytes (8 bits to 32 bits), depending on what kind of character it is: if a character is an English character in the range of ASCII, the encoding will just use one byte on that character; but if a character is beyond the ASCII range, in this example, the mathematical symbol 'π' (Pi), it'll use what's called a "variable-length encoding" method to store that character in 2 bytes [11001111 10000000]. Variable-length encoding is, fundamentally, using some bits in the first byte as a "flag" that signals whether the next (continuing) byte is part of an overarching data-set; in this case, the "Pi" character in UTF-8 (what I said is technically wrong, but hopefully the "idea" of a "flag" sticks; I recommend correcting me). The "UTF-8" unicode encoding method is primarily used in text files and websites because of its capacity to be both minimalistic (you can store textual symbols with just one byte since it's just ASCII), AND maximalistic (you can store on non-ASCII symbol using up to 4 bytes using variable-length encoding). The reason there's a maximum for UTF encoding for Unicode is that there just isn't a point to allow for characters to be stored using more than 4 bytes; disregarding UTF-8 nad UTF-16's need for variable-length encoding flag bits (thus reducing the number of bits usable to "represent" a character), UTF-32, which uses exactly 32 bits (4 bytes) to represent every single character, can already store up to a whopping 4,294,967,296 characters (2^32), well over what we as humans need to....well do anything, really. And that's not to mention (but I am mentioning it) that the Unicode conversion table itself only defines up to 1,114,112 characters (the reality of the Unicode dataset is much more complicated, but this is the gist). [aside: if you want to type your own unicode characters on Windows, you could hold the "alt" key and press four numbers on your keyboard's numpad, and voilà]</p>
+        <p>Originally used for teletypewriters, ASCII is now widely used in modern computers to "encode" characters (character encoding just means "encrypting" characters into another form, in this case, binary). But it is important to note that the ASCII table ONLY encodes English-adjacent characters; Chinese symbols and Arabic words, for example, have no way of being represented in binary, both because in history, ASCII was only intended for American/European communication, and that the total distinct combinations of a byte, 256, is not enough to encompass every character from all across the world (for reference: the world has over 7000 separate languages with their own unique words and symbols in writing). So...how does one solve this? (side note: I feel obligated to note that accurately representing every language's symbols is mandatory if we want to live in a fair world under the Internet) We solve it by...creating another character conversion table that translates into more than just one byte! That character encoding system is called "Unicode"! If you had ever used emojis before, you may be familiar with the term "unicode". Unicode is basically an (exaggeratively. exponentially) extended ASCII table that (theoretically) allows every language's character, accented or otherwise (like 'ú' or '和'), emoji (like '😍'), and mathematic symbol (like '√') to be mapped to a set of bytes; 1 to 4 of them depending on the encoding "method". If you'd ever typed in Microsoft's Windows 11 Notepad, or made a website using HTML, you might come across a thing called "UTF-8". "UTF-X" is an encoding method for Unicode that decides how many bits (X number of them) is (minimally) used to represent one character (up to use of 4 bytes). UTF-8 means a single character can be represented from 1 byte to 4 bytes (8 bits to 32 bits), depending on what kind of character it is: if a character is an English character in the range of ASCII, the encoding will just use one byte on that character; but if a character is beyond the ASCII range, in this example, the mathematical symbol 'π' (Pi), it'll use what's called a "variable-length encoding" method to store that character in 2 bytes [11001111 10000000]. Variable-length encoding is, fundamentally, using some bits in the first byte as a "flag" that signals whether the next (continuing) byte is part of an overarching data-set; in this case, the "Pi" character in UTF-8 (what I said is technically wrong, but hopefully the "idea" of a "flag" sticks; I recommend correcting me). The "UTF-8" unicode encoding method is primarily used in text files and websites because of its capacity to be both minimalistic (you can store textual symbols with just one byte since it's just ASCII), AND maximalistic (you can store on non-ASCII symbol using up to 4 bytes using variable-length encoding). The reason there's a maximum for UTF encoding for Unicode is that there just isn't a point to allow for characters to be stored using more than 4 bytes; disregarding UTF-8 nad UTF-16's need for variable-length encoding flag bits (thus reducing the number of bits usable to "represent" a character), UTF-32, which uses exactly 32 bits (4 bytes) to represent every single character, can already store up to a whopping 4,294,967,296 characters (2^32), well over what we as humans need to....well do anything, really. And that's not to mention (but I am mentioning it) that the Unicode conversion table itself only defines up to 1,114,112 characters (the reality of the Unicode dataset is much more complicated, but this is the gist). [aside: if you want to type your own unicode characters on Windows, you could hold the "alt" key and press four numbers on your keyboard's numpad, and voilà]</p>
 
         <p>Remember when I said ASCII uses one byte, A.K.A 8 bits, to store text characters? Well, that's not *technically* accurate. It only uses 7 bits. ??? Why is that? It's because the people who created the conversion standard just...didnt need any more. 7 bits was more than enough to represent English letters, numbers, and then some (though not literally accurate, one could say ASCII is just "Unicode UTF-7 but "fixed-length" (as opposed to variable-length encoding; just like UTF-32)" because it uses 7-bits). So why are they stored in a byte, which is 1 bit more than ASCII needed to translate all its characters? Well, it's because the byte is the smallest block of memory programs are allowed to store, manipulate/do operations on at one time on a computer. Hmm..I wonder what question I'm going to answer next.</p>
 
@@ -52,179 +52,18 @@
 
         <p>Helpfully, everytime you open a .jpg image file, the Operating System, like Windows, will automatically assist you in selecting the appropriate software to open it, in this case, the Photos app, based on the file extension, .jpg.</p>
 
-        <p>So does this all mean that every file can *technically* be an image or text file since it's all just bytes? Yes! But whether it "works" how you intended is a whole 'nother story (besides a few exceptions where some file types require a file to start with certain bytes, dubbed "magic numbers", like pngs and zip files; not going through those here)</p>
+        <p>So does this all mean that every file can *technically* be an image or text file since it's all just bytes? Yes! But whether it "works" how you intended is a whole 'nother story (besides a few exceptions where some file types require a file to start with certain bytes, dubbed "magic numbers", like pngs and zip files; not going through those here).</p>
     </div>
 </body>
 <script src="../sidebar.js"></script>
 <script src="../dynamicContentResize.js"></script>
 </html>
 
-
-
-
-<!--since it's all just bytes?
-
-
-but whether it "works" how you intended is a whole 'nother story
-
-helping you out
-
-Some people might still be a little hesitant because everytime they want to open a file, it'll automatically open in
-
-the truth is that the operating system is assisting you due to fiel extension
-
-
-
-let's find the track here to get back on it.
-
-
-(also backwards compatibility, don't reinvent the wheel type shi)
+<!--
+(also backwards compatibility)
 
 Mention word, quad?
 
-why use word "Table"
-
-The actual answer to my bytes and text question
-Specific examples, then move on to general ideas--is how I thought I'd be writing, but I guess I'm experimenting;
-
-but since odd numbers are quite...odd to use in a binary (2) system
-(This idea of persistent tradition will somewhat be relevant to recursive compiler design later).
-
-
-A little computer architecture history knowledge never hurt anybody (and is useful since compilers rely on that), but to bring it back to the topic at hand: if everything on a computer is just ones and zeroes/bytes, how do programs *know* whether one was of text, image, video, or executable? The answer? They don't. To answer the first question posed at the top of this section, programs "interpret" the ones and zeroes in their unique own ways, thus the difference in behavior and output on a computer. words to use? differentiate, data formatting, interpret it however they do regardless
-
-
-I guess for a good example would be images. Usually, an image is just an array of pixels. And each pixel, is stored through 3 consecutive bytes, for red, gren, and blue and how much of it (I am simplifying a bit; some prominent image formats like JPG have an additional alpha value for transparency; and there is metadata such as width and height, and compression algorithms, but you know, just in general). If this image file is read by an image viewer, it'll see the first byte, assume it's the value for red, move onto the next byte, interpret it as the value for blue, next byte green, then start the process again (read red, blue, green) until the entire file is read. Now because the data for images are just bytes, text editors can also edit them. The output from such would be something liek A&╖. See how the text editro is "interpreting" the bytes as characters using the ASCII table (btw, the text that gets interpreted into won't make sense if you read it, since the image file wasn't planned to be read as actual text (A&╖ would mean nothing))? Does this mean a text file, or realy any file, since they're all just bytes, can be opened by any program? yes (besides a few exceptions where some file types require a file to start with certain bytes, like pngs and their 00 FE start thingy, but in general...yes)!
-
-So we've established that everything, like code/text, is just ones and zeroes. It's safe to say, then, since computers understand ones and zeroes, that the compilers job is to turn human-readable-if-mapped-using-character-encoding ones and zeroes, A.K.A. code, into ones and zeroes instructions that the machine understands but we don't? So basically, the compiler's in and out are just binary files. Ok cool. But how does the Operating System "run" it though? Let's find out...
-
-
-need to elaborate ont eh phrase smallest, unit of memory
-
-"modern systems"
-
-"8 is magical number?"
-
-
-
-
-Relating back to file extensions, I want to give you another perspective on what compilers really do: 
-
-
-In the syntax highlighting section, I highlighted that 
-
-I mentioned that scripts and text files 
-
-What I want to (increasingly) do in this article is
-
-I want you to have another perspective on what compilers really do.
-
-
-
-
-I mentioned that the content, the "bytes" of scripts and text files are the same. 
-
-
-Actually let's talk about my goal in this article: what I really want to do is simplify and de-magic-fy what a compiler really does. now I talked about (please update this) how compilers translate programming languages into ones and zeroes. I mentioned that what the bytes between text files and script files were the same. Now many of you might have known this, but text, by that I mean characters, is really stored as bytes, a group of 8 bits, bits being one or zero (on and off switches in the hardware level). I'm sure many of you know this, but when I was younger, I failed to realize the implication this has for compilers, since it's just transforming text into binary.
-
-Everything at the hardware level is just ons and off switches; what we in the software level call ones and zeroes.
-
-Now I acually want to go back to the file extension thing: W
-
-Expand on 
-
-
-
-How I'm going to write this section
-2. Ask how text is stored--binary
-3. Binary is elusive?
-4. encoding
-
-Topics: 
-encoding
-compiler demystifying
-young me failed to connect that compilers' input and output are just binary
-bytes
-
-I knew that text was just a representation of binary, and i know that computers operated on binary, but I never connected dots--that compilers are really just a program that takes a file as input (its binary that can be encoded into human-understandable text in the form of a programming language), and outputs another file (its binary that read a jumbled mess when represented in text) in the form of machine code. Transition into O.S. and how compilers can "run" code. Maybe something on .exe
-
-I know how to end this section. Say that compilers just take a file as input, then outputs another file. Ask question: "but how does a computer "run" it though?". Well.....transition into next section: O.S. as programs
-
-I wrote before: "What I knew then was that computers store and operate on things in ones and zeroes, on and off switches, and what anybody typed in a programming script was certainly neither of those things". But is that true? That what anybody typed in a programming was neither ones and zeroes, on and off switches? If you couldn't tell, that was a rhetorical question, and the answer is no. No, anything you type in a script is really just ones and zeroes, on and off switches.
-
-But most of you probably knew that--that text, at the hardware level, is really just bytes, that is represented in a 
-
-
-Perhaps this IS known to some of you, but I just want to get this off my chest: there is no such thing as "text" as a data stored on the computer
-
-Programs "interpret" the ons and offs however they like.
-
-Also state that "file extensions" are really just a bunch of people agreeing on how to format some type of data. (Really makes you think about the vulnerabilities, huh)
-So how do 
-The concept of interpretation...
-
-will introduce the idea of "Representation" -> later used to justify "int" or "if" or elements like that
-
-ultimate goal of this section: demystify compilers as some magic, and frame it as just a program that takes in a binary file that can be easily decoded into human-readable programming language, into a binary file that can computers can understand as instructions.
-
-I said that "the only difference between [] is the extension in their file name"
-
-text is really just a representation of ones and zeroes.
-
-"I have not connected the dots on how one file can be opened by multiple programs." - introduction/file extensions
-
 https://www.ascii-code.com/articles/Beginners-Guide-to-ASCII
 
-Ok now I'm going to blow all your minds out: every file is a text file. Now let me qualify that : everything *can* be a text file. What past me knew is true, computers store things in 1s and 0s. Then how are texts stored??? Well, they are't; they are really just *representations* of different 1s and 0s. In the ASCII table, every symbol (ok, English ones) can be mapped to a set of 1s and 0s (that are different from every other symbol's 1s and 0s). For example, the letter "A" can be 000000001, and the character "&" can be 00010011. Now I want to tagentlly refer to something else: a character's property is separate from its representation. Take the letter "O", if we somehow wrote the letter O like "╤", what would change? Well, the only thing that would change is how we write out the letter. The meaning of the letter O, as well as its compounds with other letters that form words would also not change. The only thing that changes is its representation. Now if wrote the letter O like "P" (like the letter P), what would change? well, words like hippo would become hippp, and then we wouldn't know how to pronounce it. So in a set of characters, the only thing that matters besides its property is its non-similarity as other characters in the set. This is what computers do--represent characters by assigning them a representation in 1s and 0s that differ from other characters' 1s and 0s.
-
-Let's talk about encoding -> compiler is just transforming a some binary into another binary; a text file into another text file. A compiler, is really just manipulates strings based on preestablished rules
-
-
-
-I want to cap off knowledges on scripts and text files and also transition topics to machine code and the idea of bits and bytes and also the idea of representation.
-
-"text" is not a property of the file itself. A program will blindly open a file thinking it's text and display the bytes, represented in text. Now a byte is 8 bits long. Some encodings--explanation of encodings--don't go all the way up theres
-
-concept of encoding, representation, elaborating on how multiple programs can open the same file. Like it's just choosing what to display whatever it wants.
-
-Perhaps to some of you, "binary" seems elusive; like with "code" and "text", it seems to be a type of data unlike anything else. Transition phrase, it's not.
-
-Somewhere here talk about ASCII
-This conception is important: binary aren't special, they can all still be represented in text, there's nothing special about "ones and zeroes" because everything is ones and zeroes. The concept of a compiler is to convert ones and zeroes, read in the form of text in a script, into ones and zeroes that computers know what it means and what to do with. Compiler is just transforming one set of ones and zeroes into another set of ones and zeroes. Or if you want to invoke representations, one text into another text. If you want to boil it down, even beyond being a translator, a compiler is just a program that takes in a long string of text in a file, and outputs out another string of text in a file. It's string manipulation, that's what it is. It adheres to rules that turns one string into another. Through some special rules determine how a compiler turns a file full of (code) text and turn 
-
-Somewhere in the middle of the previous paragraph splinter off to talk about usage of bytes and IBM. Then conclude with the string manipulation thing, then top it off with the next sentence.
-
-Those rules are what we call "grammar".
-
-Maybe in later sections answer the question why cant english be a programming language (only after introducing the whole of language though): cuz it's too long.
-
-Or in words I was talking about earlier, a compiler is a translator.
-
-An inessential information I wanted to talk about is WHY bytes and how they came to be. IBM and the need to represent things, the only way to do it is grouping things or something. And like IBM stepped in n shi.
-
-I should have lead with this to avoid confusion, but better late than never I guess.his might be news to some of you (sorry I didn't talk about this earlier). Maybe some of you thought 
-
-Then add onto that by saying text files are just bytes, 1s and 0ss, and computers operate on ones and zeroes. Suggest a connection.
-
-Start the next section with computrer "instructions" to build off of this section
-
-
-
-Computers can only input and do stuff and output in 1s and 0s (might elaborate on this further, or might not). So if we wanted to represent the letter O using that system, we just need a representation of O in 1s and 0s that is dissimilar to other letters' 1s and 0s (how many times have I said 1s and 0s?). The ASCII Table (perhaps I haven't said much about what it is--its a mapping of letters to their representations in binary) assigns the letter O "01101000". Now that we've established how characters (letter, symbols, AND numbers; more on the latter later) are represented, its a fair question to ask why a specific letter was given a specific binary in correspedence. Something to do with the military I think. The arrangement of the binary has a little easter egg (or really, a design choice) that letters from A-Z are in order of the binary increase, and upper- and lower-case letters are just 1 bit flipped for efficient switching (I think). I'm not going to talk much about the order of the binary. For now, just know that every character can be mapped to a a set of 1s and 0s (a byte) that the computer can understand.
-Still, some might be confused: How does the computer know what to display if the only thing the computers knows is 1 and 0s. Well, I can't tell you for sure, but I'm betting that somewhere int he computer--wait hold on let me start from elsewhere; you know how letter are really just lines and curves? ...lines and ucrves that can be *gulp* represented by math? As I was saying before being interrupted by myself--the lines and curves of letter are stored, and anytime someone wants to display a character, the computer will get the binary of the character, run it through the liens and curves section, find the corresponding one, then do some more math, adjust for font and size, display the characters with pixels when those liens and curves are (and you know, don't draw the pixels if the lines andc curves dont. Now I'm no expert, and what I'm saying might be completely wrong, and the computer engineers might have done something different. But if my interpretation is plausible, there is no magic on how the computers draw and store text.
-
-I mentioned "bytes", this section is kind of irrelevant to the whole of this book, but I just want to get this out my chest. Need a little refresher? bytes are 8 bits (bits being either 1s or 0s. I said that each character is represented by 1 byte (ok for those of you who are nerds and want to point out unicode or latin or some shit, fuck off); but why? Capitalism. Yeah, capitalism. In the beginning of computers, there was not "set amount" of bits grouped together. It was a free-for-all-some computer companies had 16 bites as a group, some companies had 4. IBM, a famous company not back in my day because I'm not old, decidede to take this opportunity of chaos to streamline the concept of "bytes" into just 8 bits (the mean of all the other "byte" counts. This way, they'd be the "Savior" of computers and get lots more bread. It worked! Not the company I mean, they've kind of fallen out the map, but the streamline did! Now, "bytes" are 8 bits. Mention of IBM can transition into computer companies
-
-You know what, I probably should have lead with this: why 8 bits? yes yes capitalism, but why group bits together? What's the benefit of that? Well.....hopefully future me figures it out.
-
-To bring these disconnected sections to a close, ora rather, to recap this: Every symbol in a programming language file are just bytes, which are just bits, which are just 1s and 0s. Hmm ... we know that computers do stuff when you put what is essentially 1s and 0s (electricity ons and offs) ... I wonder if there's a connection....
-
-
-
-Holy fucking shit what the fuck is this mess
-
-Sources: 
-
-https://stackoverflow.com/questions/32491925/why-do-bytes-exist-why-dont-we-just-use-bits
-
-explanation of what mrose code is?-->
+https://stackoverflow.com/questions/32491925/why-do-bytes-exist-why-dont-we-just-use-bits-->
