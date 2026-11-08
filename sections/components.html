@@ -1,9 +1,32 @@
-Programming language is the standard. Compiler is its implementation
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Components/of a Language</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../sidebar.css">
+</head>
+<body>
+    <div id="sidebar"></div>
+    <div id="content">
+        <h1>Components/of a Language</h1>
 
+        <p>Now we're really going to get into designing a programming language. And the way we'll do that is to look at how existing programming languages, well, do what they do. But not their keywords or their datatypes, first, we'll actually look at their spaces.</p>
 
+        <p>Just like in English, and the majority of natural human languages, there needs to be a way to separate words/concepts from one another, in order for the composed sentences to have meaning/make sense. Spaces, or rather, whitespaces, is thus the most obvious choice to help do so (I don't think I need to substantiate this). In programming languages, which are built for human reading of computer instructions, whitespaces are especially important to separate things like names from other components of the language, lest wrong, or even disasterous, code executed. For example, "int myVariable = 5;" in C is vastly different from "intmyVariable = 5;"; the former declares an integer variable called myVariable and initializes it to 5 (probably the intended code), while the latter assigns the value of 5 to an existing variable (if only properly declared before this line), which can be assumed to be an integer one, named "intmyVariable" (probably isn't the intended behavior).</p>
 
-first we look at not the words in a programming language, but the (white)spaces. Like in natural languages, we need a way to separate words/concepts, and whitespace is the best way to do that. e.g. "int myVariable = 5;" in c++ is different from "intmyVariable = 5;"; the former declares an integer variable called myVariable and initializes it to 5, while the latter assigns the value of 5 to an existing variable, presumably an integer, named "intmyVariable"
+        <p>But you may have noticed that some "things" don't need spaces to differentiate itself from other parts/components of the language, like semicolons, commas in function call arguments list, or equal signs; I could have done that above. I would again point to writing--the words I'm writing on right now, the punctuation marks, like commas, dashes, quotations, parenthesis, and periods, all don't need to have a space before, or really after, them. This is because words that make up "meaning", like "words", "that", "make", "up", and "meaning", are guranteed to just be comprised of letters. So since programming languages are modeled after natural languages, 'tis the same--anytime a symbol appears, it will never be assumed to be part of the previous set of characters, thus no need for white spaces.</p>
+        
+        <p>Some might understand that semicolons ';' and commas ',' are represented using symbols, because they don't have traditional "meanings", they serve more of a delimeter (separator) role in writing and thus in programming (former for new line, latter for list items). But some might question why the "assign" concept in programming ('='), or the "add" operator ('+'), or the "divide by" ('/'), "or "less than" ('<'), the "not" operator ('!'), etc. are not written out using the actual word, but instead mere symbols, despite having "meaning". Well, laziness so shorthand good and math (historical connection), that's the answer (this is like the best I could do connect to the previous section LMAO: "laziness and math").</p>
 
-but you may notice that some "things" don't need spaces to differentiate itself from other parts/components of the language, like semicolons an commas. Same in writing, things that represent concepts, like datatypes and names, are already in letters, and will never be in special symbols (though one can create their own programming language to change this established/standard rule), so anytime a symbol appears, it will never be assumeed to be a part of the previous set of characters, thus no need for white spaces
+        <p>Anyway, that does tangently raise the question: what should be included in a programming language?</p>
 
-datatypes, names, all need letters as identifiers
+        <ol>
+            <li>For one, we obviously need variable names, because we need to store information AND we need a unique name for each information so we don't get lost in the sauce. These are called "Identifiers", these names.</li>
+            <li>For two (I don't know why I'm saying the numbers again if this is already a list but whatever I'll go with it), we need to represent Datatypes. Computers aren't just for numbers anymore (at least not at the higher-level, inside the CPU and stuff it's all still just math), we can depict text now, so we obviously need to separate the "text" concept from the "numbers" concepts, so how about a "char" datatype to represent one singular character, and a "string" datatype to represent a "string" of characters (string datatypes are actually a bit more complicated, even C doesn't have one, but that's kind of beyond the scope of my writing, since it deals with pointers and dynamic memory and all that; search it up!), and a separate "int" datatype for integers? Oh yeah and we also need a way to determine, where there's only two possibilities, if an if statement would run, how about we call that a "bool" for boolean (named after someone) (it's a shame we can only operate on a whole byte, instead of an individual bit, or variables of this datatype would not waste the rest of 7 bits since a boolean can only be one (1) or off (0))</li>
+            <li>And speaking of if statement, third, we'll obviously need statement indicators. By indicators I mean words that could stand in front of a block of code to display how that block of code will run. For example, an "if" keyword that signals the indeterminate execution of the following block of code, a "while" keyword that signals a loop for the following code, </li>
+        </ol>
+    </div>
+</body>
+</html>
