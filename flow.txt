@@ -23,3 +23,7 @@ Sentence in human languages -> statements in code -> instructions in mahcine cod
 The basic instructions in machine code include storing memory and operating on memory
 
 It's far easier to translate modern English to cavemen language through translating it into an archaic form of English then cavemen, than it is to directly translate into a cavemen language.
+
+mention pointers?
+
+Remember, what I mean by "code" is human-readable, "instruction" is machine-readable.

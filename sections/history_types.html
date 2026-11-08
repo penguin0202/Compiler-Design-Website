@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>History/Types of Compilers</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../sidebar.css">
+</head>
+<body>
+    <div id="sidebar"></div>
+    <div id="content">
+        <h1>History/Types of Compilers</h1>
+
+        <p>Speaking of history, now that you have this bare-bones knowledge of assembly, we can finally talk about the history of computers and programming languages in a linear fashion, like how I wanted to tell.</p>
+
+        <p>The original computers were calculators. Yes those you bring to your SAT and never use. Those on your phone as an app. They were intended to be used as an efficient way of, well, calculating. A great example would be the Enigma Machine during World War II to crack secret German codes. Or those giant computers in IBM rooms. They mostly worked with numbers; they're weren't a lot of "text" manipulating.</p>
+
+        <p>The earliest computers were programmed in punch cards. Through either by allowing light through or allowing copper wires to line up (basically the O.S. section's "ons and offs switches"), these pieces of paper with holes punched through them were how the first programmers inputted ones and zeroes into the computer to have it perform certain tasks. BINARY was the first programming language HUMANS had to program with (established its complexity prior), so it stands to reason to the first programs created weren't that complex, hence simple calculators.</p>
+
+        <p>Then, an invariable trait of the human race shone through...laziness--I mean the motivation to un-mundane tasks. The first programmers thought, writing binary is quite tedious; if only there were a way to write out instructions in natural languages (English) and have some sort of program take that as input and output out the binary...Hmm...Thus a solution was born--programming langauges and "compilers". The Assembler, A.K.A the compiler for assembly, translating into machine code was a program that was CREATED IN BINARY. It simply took a binary file, manually typed out by programmers, which if using ASCII will decode into textual characters like "mov" or "global" (see previous section for these assembly instructions), and outputted the machine code equivalent. I want to emphasize this "file" approach to understanding compilers because it might be confusing to some how compilers in the first place could be created if there were no "programming language"s to write them in--it's because (a) binary technically already is a programming language, and more importantly (b) the content of the new programming language, written in the old programming language, is external to the compiler (easier to understand).</p>
+
+        <p>In a way, humans were the first compilers, translating our own thoughts into binary. Sure that's a loose definition, but that might just help understandings. In Another way, agentic AI does the same. (not that I'm encouraging it of course)</p>
+
+        <p>Anyways, then people thought assembly was too hard to program (rightfully so), then the famed C programming language was born. And here's where it gets interesting. The first iteration of C written in 1972, the compiler for it was written in assembly (and a bit of the B programming language (its predecessor), but that's beyond what I desire to talk about). Then, to young me's surprise, the second iteration of the C language...was written IN THE C LANGUAGE!?? This is what's called bootstrapping (term comes from phrase "pulling yourself up by your own bootstraps"). A bootstrapping compiler is where a language's compiler is written in itself, usually a previous version of itself. Makes sense, because if an established language, C, is already around and obviously much easier to code in than assembly, why would anybody want to reimplement the compiler, doesn't matter which language's, whether it's C itself or Python, in assembly again? An important caveat in a bootstrap compiler is that the previous version of the language has to be (basically) bug-free, or else that bug will persist throughout all subsequent language updates. Important notice: I may have (definitely have) mislead you--C isn't the first language to do this; assembly itself has done this mutliple times. The reason I wanted to single out C is because of its ubiquity in the programming space and its prominence in discussions surrounding bootstrapping.</p>
+
+        <p>I guess this is as good of place as any to say this thing I probably should have said a long time ago: I've been using the terms "programming language" and "compiler" pretty close together, with little explicit differentiation, so here it is: the programming "language" is the standard/rules, and the "compiler" is the implementation of those rules. Think of it like in English: "grammar" dictates how to write, the rules and stuff, akin to the programming language, and an English essay grader, who checks whether someone's written essay adheres to those grammar rules; and will yell at you if not--that is the compiler. In the next section, we will talk about the components that make up the programming "language", and then later on we will talk about how to enforce those rules in the compiler.</p>
+
+        <p>Fast forward a couple years, and the Python programming language is created. Its implementation is a little more unique. Instead of translating the language into assembly and then into machine code into a binary file, it actually doesn't translate at all, not at least until runtime (sort of) (runtime meaning the period of time the program runs, think when Google Chrome window open). When its compiler runs, it actually just scans every line of code, statement by statement, and generate something called "bytecode", which isn't important to what I want to talk about but it's basically a higher-level language than assembly, and executes them statement by statement by "CONSULTING" THE COMPILER PROGRAM! Think of the "compiler program" as an Operating System, actually, every line of code will go through the program, and will get executed sequentially at runtime (if you think back, whent he O.S. is booted up, it is at its runtime, running for every other sub program). Python thus has what's called an "interpreter" compiler, where every line in the language is only executed/interpreted sequentially when the program's actively running. By the way, the usual language to create a Python interpreter is C!</p>
+
+        <p>Another curious case of compilers is called the "transpiler". Can you guess what it does? I'm sure you'll get it under a couple of tries. That's right, it "translates" a programming language into another! But wait isn't that what normal compilers do? translate a language into the assembly language? Yes, but this specialized, or should I say lazy, version of a compiler translates from one language into another higher-level language! For example, one could develop a transpiler for Python that "transpiles" into C, and then leverage C's already-existing compiler to translate THAT into assembly then using Assembler to turn THAT into machine code; essentially, a transpiler is a wrapper for another compiler. There really are levels to this, and I'm sure you know I meant that in a couple different ways.</p>
+
+        <p>Actually, here's a diagram to rub that joke in your face: </p>
+
+        <p>High-Level&emsp;Python<br \>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;C<br \>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Zig (another mid-level programming language)<br \>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;LLVM IR (hopefully will elaborate on this later)<br \>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Assembly<br \>
+            Low-Level&emsp;Machine Code<br \>
+        </p>
+
+    </div>
+</body>
+<script src="../sidebar.js"></script>
+<script src="../dynamicContentResize.js"></script>
+</html>
+<!--
+Sources: 
+https://www.computerhistory.org/timeline/software-languages/
+
+https://www.ibm.com/history/punched-card-->

@@ -12,7 +12,7 @@
     <div id="content">
         <h1>Operating/System</h1>
 
-        <p>At the hardware level, the Central Processing Unit (CPU) will execute any instruction it is given via electrical signals (basic low-level instructions like storing variables by value; will be elaborated in the next/assembly section !!!!!!). A collection of instructions to the CPU that performs some type of function, whether that is an image editor to, well, edit images, or a videogame for entertainment, is what's called a "program".</p>
+        <p>At the hardware level, the Central Processing Unit (CPU; "Black box" of the computer) will execute any instruction it is given via electrical signals (basic low-level instructions like storing variables by value; will be elaborated in the next/assembly section !!!!!!). A collection of instructions to the CPU that performs some type of function, whether that is an image editor to, well, edit images, or a videogame for entertainment, is what's called a "program".</p>
 
         <p>And Operating Systems, like Microsft's Windows and Apple's Mac, are actually just programs.</p>
 
@@ -36,7 +36,7 @@
 
         <p>What was I talking about again? Oh right how the O.S. runs code. Yeah since the O.S. is in fact a running program, (technically already part of the O.S. code, )all you need to do run your custom program is to tell the O.S. to add it to its programming. You can either do that (using Windows as an example) by double-clicking on an .exe icon in your folders, or run ".\MY_PROGRAM.exe" in the command prompt; both of which works because the interfaces--desktop or file explorers and command prompt--are already all part of the O.S. (desktop and file explorers in particular function just like buttons in app that signals the app do something), so the O.S. would automatically get the information that it should load the .exe's code into its own.</p>
 
-        <p>But Operating Systems can't just sequentially add programs' code, that'll only allow it to run one program at one time (which is not what they do since I can both talk to my friends on Discord and record Valorant gameplay on OBS Studio at one time!), and that's where a thing called "CPU Scheduling" comes in. Ok I may have mislead you before, the O.S. doesn't really "add code to its programming", it more so disperses lines of code in between the long list of instructions it has the CPU run every nanosecond. Huh..In trying to correct myself, I've adequately described what I wanted to talk about next, yes, "[dispersing] lines of code in between the long list of instructions [the O.S.] has the CPU run every nanosecond" is exactly what CPU Scheduling is! CPU Scheduling is yet another job of the Operating System. It is intended to be a way to run multiple programs (seemingly to the human eye) concurrently by dividing each program's code that the O.S. receives and the CPU is to run into smaller segments and inserting them into a different place in memory where the CPU gets inputted the instructions.</p>
+        <p>But Operating Systems can't just sequentially add programs' code, that'll only allow it to run one program at one time (which is not what they do since I can both talk to my friends on Discord and record Valorant gameplay on OBS Studio at one time!), and that's where a thing called "CPU Scheduling" comes in. Ok I may have mislead you before, the O.S. doesn't really "add code to its programming", it more so disperses lines of code in between the long list of instructions it has the CPU run every nanosecond. Huh..In trying to correct myself, I've adequately described what I wanted to talk about next, yes, "[dispersing] lines of code in between the long list of instructions [the O.S.] has the CPU run every nanosecond" is exactly what CPU Scheduling is! CPU Scheduling is yet another job of the Operating System. It is intended to be a way to run multiple programs (seemingly to the human eye) concurrently by dividing each program's code that the O.S. receives and the CPU is to run into smaller segments and inserting them into a different place in memory where the CPU gets inputted the instructions. (search also CPU state, context-switching, and threading for more information and a more comprehensive view of what I'm talking about)</p>
 
         <p>And..That's it folks. Let's recount the steps we took to run code: </p>
 
@@ -54,40 +54,9 @@
 <script src="../dynamicContentResize.js"></script>
 </html>
 
-<!--CPU state, context-switching, threading.z
-
+<!--Keep in mind, this section is heavily simplified and largely incorrect; what I am really trying to get at is the main idea
 It's just that simply OS code is there from the start, and they know how to initilize everything. Once you knwo how to do that, you can create your own OS (some have!).
 
 If you're wondering why instructions and memory are tied together, it's because they are irl.
 
-mention pointers?
-
-Mention registers
-
-mention embedded programming above
-
-Remember, what I mean by "code" is human-readable, "instruction" is machine-readable.
-
-
-Black box.
-
-Well, the compiler "sends" the finished binary file (discussed earlier) that is full of a similar type of basic low-level instructions that the operating system is coded in, to the Operating system. The operating system takes note, as it's just a program, that a program inside the program is trying to do things on the computer, and sort of "adds" the program into its own programming. Since any program that is developed under the Operating system is part of the Operating system, the program is techinically "running" (help!). The purpose of operating system is to ensure the developer doesn't do anything stupid. The machine instructions the operating systems really are operate on the hardware, and the O.S. usually allow users to use them corerctly, which is why they have to be absolutely perfect; any hardware-wise mistake, like leaving an infinite while loop, is devastating; there is no failsafe in the machine world (ok maybe some c=microchips do, but you know waht I mean). That is why operating systems are built--to prevent coders from doing harmful things to the computer hardaware. It provides an interface between the hardware and the software. Software, as the name implies (but is not actually the case), is not as rigid. It has the operating system as fail safe. Ok back on track: once O.S. receives the code from the compiler (there is an interface for compilers "Sending" executables to O.S.; on windows, it is called "double-clicking ont he app"), adds the executable machine instructions onto the huge list of instructions the CPU has to do every nanosecond, and yeah voila! You got yourself a running program.
-
-I really like the story narrative; influence by agents of shield?
-
-O.S. directly interfaces the hardware through assembly (credit to those people)
-
-Keep in mind, this section is heavily simplified and largely incorrect; what I am really trying to get at is the main idea
-
-Connecting back to the syntax highlighting section, the reason text files can run on a computer is because the O.S. is a program, and any program we run if really just part of IT
-
-I need to fucking elaborate on why text files can run things on the computer" - syntax highlighting section
-
-What you might imagine is a program directly talks to the hardware to idk display stuff and do variable calcs
-But really, the O.S. handles everything--your programs interfaces with the O.S. rather than the hardware.
-
-Perhaps some conceptions of you guys is that since on a breadboard, there are speicific switches and programs
-have to do stuff with them, but the O.S. does that already\
-
-
-(ons and off switches) [not always the case--see punch cards in the history section]
+breadboard

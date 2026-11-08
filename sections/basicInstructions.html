@@ -24,29 +24,29 @@
 
         <p>
             1    section .data<br \>
-            2        msg db "Hello World!", 0xa<br \>
-            3        len equ $ - msg<br \>
+            2    &emsp;msg db "Hello World!", 0xa<br \>
+            3    &emsp;len equ $ - msg<br \>
             4    section .text<br \>
-            5        global _start<br \>
+            5    &emsp;global _start<br \>
             6    _start: <br \>
-            7        mov eax, 4<br \>
-            8        mov ebx, 1<br \>
-            9        mov ecx, msg<br \>
-            10       mov edx, len<br \>
-            11       int 0x80<br \>
-            12       mov eax, 1<br \>
-            13       xor ebx, ebx<br \>
-            14       int 0x80<br \>
+            7    &emsp;mov eax, 4<br \>
+            8    &emsp;mov ebx, 1<br \>
+            9    &emsp;mov ecx, msg<br \>
+            10   &emsp;mov edx, len<br \>
+            11   &emsp;int 0x80<br \>
+            12   &emsp;mov eax, 1<br \>
+            13   &emsp;xor ebx, ebx<br \>
+            14   &emsp;int 0x80<br \>
         </p>
 
         <p>This assembly program prints "Hello World!" to the console. Contrast that with C's version: </p>
 
         <p>
-            1    #include <stdio.h><br \>
+            1    #include &lt;stdio.h&gt;<br \>
             2<br \>
             3    int main() {<br \>
-            4        printf("Hello World!");<br \>
-            5        return 0;<br \>
+            4    &emsp;printf("Hello World!");<br \>
+            5    &emsp;return 0;<br \>
             6    }<br \>
         </p>
 
@@ -70,7 +70,7 @@
 
         <p>Remember when I said the job of a compiler to translate human code into machine code? I, sorta, lied. Modern compilers really just translate code into Assembly. Why?</p>
 
-        <p>First and foremost: Machine code is too diffult to translate into directly. It's even more complicated than the already verbose Assembly language (being one level "below" it in the sense that it's closer to hardware instructions; actually, it is hardware instructions). So, compilers generally just translate into Assembly (unless you really want to go crazy and ), and then rely on this magical little program called an "Assembler" to the rest. By rest, as you had probably guessed from the context and my previous sentence structure, I mean the Assembler then converts the converted assembly into machine code. It's quite a fascinating piece of software, but it is not as complex as either the Assembly language or machine language themselves, as the both are already very similar in structure and syntax, so it makes for a relatively east translation between the two. And I'll let you in on a little secret (or spoiler, if you'd read ahead): Assemblers, with its task of translating from one programming language, Assembly, to another, machine language, is itself a COMPILER! Wow isn't that amazing. </p>
+        <p>First and foremost: Machine code is too diffult to translate into directly. It's even more complicated than the already verbose Assembly language (being one level "below" it in the sense that it's closer to hardware instructions; actually, it is hardware instructions). So, compilers generally just translate into Assembly (unless you really want to go crazy and ), and then rely on this magical little program called an "Assembler" to the rest (thank you programming forefathers). By rest, as you had probably guessed from the context and my previous sentence structure, I mean the Assembler then converts the converted assembly into machine code. It's quite a fascinating piece of software, but it is not as complex as either the Assembly language or machine language themselves, as the both are already very similar in structure and syntax, so it makes for a relatively east translation between the two. And I'll let you in on a little secret (or spoiler, if you'd read ahead): Assemblers, with its task of translating from one programming language, Assembly, to another, machine language, is itself a COMPILER! Wow isn't that amazing. </p>
 
         <p>(Not to cut that excitement short but I still got another point to make)</p>
 
@@ -78,101 +78,17 @@
 
         <p>Now a long way back to the metaphor I hyped up in the beginning: </p>
 
-        <p>Let's say you were trying to translate English into cavemen noises (grunts) (bear with me). It'd be pretty hard, no? Buuttt if you were to translate modern English into an older version of English (like the use of "thou"), then into proto-germanic (*example here*), THEN into cavemen noises (if you couldn't tell, I'm tracing the history of the English language), it'd be a much easier process, no?</p>
+        <p>Let's say you were trying to translate English into cavemen noises (grunts) (bear with me). It'd be pretty hard, no? Buuttt if you were to translate modern English into an older version of English (like the use of "thou"), then into proto-germanic (like *þū (pronounced like "thoo") to mean "you"), THEN into cavemen noises (if you couldn't tell, I'm tracing the history of the English language), it'd be a much easier process, no?</p>
 
-        <p>Machin code is cavemne noises, and modern english is a high-level programming language. Assembly, is something like proto-human/pre-language</p>
+        <p>Machine code is analogous to cavemen noises, with high-level programming languages corresponding to modern english, and assembly as archaic proto-human/pre-language. So we've nailed down what a compiler has to do: translate a (high-level) programming language's code into Assembly (and let the Assembler do its job). (this is its last step/stage)</p>
 
-        <p>THERE WE GO!! I LIKE THIS CONTINUE THIS TOMORROW PLEASE</p>
+        <p>Aside: Assembly programming operating on physical memory (rather than virtual or theoretical ones when declaring an abstract variable like "int a;" in C) is called embedded programming, and is crucial in the development of Operating Systems.</p>
     </div>
 </body>
 <script src="../sidebar.js"></script>
 <script src="../dynamicContentResize.js"></script>
 </html>
 
-<!-- reference O.S.'s line "Compiler translates that code into (executable) binary instructions through some process I will talk about, all the while checking for any compile-time errors"'-->
-<!--So we've nailed down what a compiler has to do: translate a (high-level) programming language's code into Assembly.
-
-Let's go through the process of creating and running a program again: 
-1. Write code in a select (high-level) programming language
-2. Compiler takes that file, tr
-
-And the reason for doing that is because Assembly code matches quite closely to actual hardware instructions, whilst being able ot be interpreted by humans (if you study hard about it that is, but I've said that before). The resulting Assembly could be translated into the actual machine code via an Assembler (that will be "linked" to and ran after our main compiler), then the machine code, A.K.A. an .exe file if you're Windows, could then be run as a program in an Operating System.
-
-And...that's it folks. We've essentially, well, essentialized compilers to just a 
-
-
-whose statements match closely to actual hardware instructions. 
-
-
-
-
-Now that you have this knowledge of assembly, we can finally talk about the history of programming languages -> 
-
-
-
-
-
-
-
-
-
-
-
-created by our holy programming forefathers (and those following their footsteps), the "Assembler" to do the rest. Assemblers, as the context and my previous sentence structure suggests, does the rest of converting assembly into machine code. It is quite a fascinating piece of software
-
-
-Made by a bunch of smart people, this tool is called an Assembler!
-
-assembly turns out to be pretty complicated (it takes at least 14 lines to write a simple "hello world" program, and the complexity stacks as more control structures and operations are added), and machine code being supposedly even harder? since a hello world program is such a headache
-
-compilers nowadays
-
-Converting to assembly is the last step in creating a programming language and its compiler
-
-Let's get back on track: remember all the way back when I casually mentioned one of the steps in a compiler is converting your programming language into assembly? Yeah
-We're due to get back on track. 
-
-Remember all the way back when I casually mentioned yk translation of language to assembly? yeah that thing uh huh
-
+<!--
 I haven't even begun to scratch the surface inside the world of Assembly, and I'm already exhausted writing this. Anyways, I'm not going to pretend I am experienced at all with this language, just know that 
-
-Anyways, I'm not going to pretend I am experienced at all with this language, so I'm 
-
-Because as you can see, I'm already up in arms trying to explain system calls, I cannot do any better than that
-
-context-switching
-
-(a cumbersome process, I agree, but it's how CPUs work)
-I'm not going to get through a rundown of how to code in Assembly, but I will run through this example to give you an idea of what Assembly's all about. 
-
-literals meaning actual data, like the number 5, the boolean True, or the character 'a' -- LEXER SECTION
-
-As opposed to C who allows coders to just "pass" a "string" to a "function" that'll magically tell the Operating System to print it to its console, Assembly requires the coders to manually define the string as a global variable, determine its length, 
-
-managing each individual memory/registers individually, and putting all the pieces together.
-
-That's absurd, you say, this is NOT readable AT ALL; it just looks like a bunch of random letters. To that I say: ...I agree. I'm not remotely competent enough to disagree because, guess what, I've never written a line of assembly before...So what makes me qualified to talk about this subject?
-
-..Moving on.
-
-I do know the basics of assembly though, which actual involves some computer architecture notions.
-
-[insert explanation of basic assembly instructions]
-
-just like how converting from cavemen language into Englsih is hard, but tracing back and translating into previous versions of English is best!
-
-asembler is just a special specific type of compiler
-
-So all we need to do to create a usable programming language is to translate it into assembly (which since it's code, a text file with the assembly's syntax) via our own compiler, and then let the assembler handle the rest of translating into machine code, then 
-
-I talked about basic insutrctions CPU does. wHAT ARE THEY?
-
-goto
-registers
-
-we need to know what a programming langauge should do
--- we need to know what a computer does and abstract it
-
-we know that programming languages is to translate binary machine code into a format humans can read
-
-Quite a few actually, but don't worry, I'll talk about all of them in not-detail-because-I'm-not-that-smart in next sections-->
+-->
